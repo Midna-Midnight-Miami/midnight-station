@@ -25,8 +25,16 @@ head-rev-role-greeting =
     Viva la revolución!
 
 head-rev-briefing =
+<<<<<<< HEAD
     Use the manifesto to convert people to your cause.
     Get rid of all heads to take over the station.
+=======
+    Use flashes to convert people to your cause.
+    Eliminate all heads of staff, and secure the station.
+    You have been graciously sponsored with an uplink from
+    the YLF, in-coordination with the Syndicate.
+    Your uplink code is: {$code}
+>>>>>>> d1d44d40f8 (first draft)
 
 head-rev-break-mindshield = The Mindshield neutralized hypnotic powers, but its functionality has been compromised!
 
@@ -85,3 +93,10 @@ rev-deconverted-text =
 
     You are no longer a revolutionary, so be nice.
 rev-deconverted-confirm = Confirm
+<<<<<<< HEAD
+=======
+
+rev-headrev-must-return = The Revolution is leaderless. We must return to the station within a minute!
+rev-headrev-returned = A Head Revolutionary has returned to the station, the Revolution continues!
+rev-headrev-abandoned = You have disgraced the revolution by abandoning your station. The Revolution is over.
+>>>>>>> d1d44d40f8 (first draft)

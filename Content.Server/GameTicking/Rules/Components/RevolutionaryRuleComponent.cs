@@ -47,4 +47,34 @@ public sealed partial class RevolutionaryRuleComponent : Component
     [DataField] public bool HasAnnouncementPlayed = false;
     [DataField] public bool HasRevAnnouncementPlayed = false;
     // gobo edit end
+<<<<<<< HEAD
 }
+=======
+
+    // funky station
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public TimeSpan? RevVictoryEndTime;
+
+    // funky station
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public TimeSpan RevVictoryEndDelay = TimeSpan.FromMinutes(2);
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public TimeSpan? RevLoseTime;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public TimeSpan OffStationTimer = TimeSpan.FromMinutes(1);
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public bool RevLossTimerActive = false;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public bool RevForceLose = false;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public int StartingBalance = 40;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public EntProtoId UplinkStoreId = "StorePresetRevolutionaryUplink";
+}
+>>>>>>> d1d44d40f8 (first draft)

@@ -70,8 +70,15 @@ using Content.Server.Communications;
 using System.Linq;
 using Content.Goobstation.Shared.Revolutionary;
 using Content.Server.Chat.Systems;
+<<<<<<< HEAD
 using Content.Shared._EinsteinEngines.Revolutionary;
 
+=======
+using Content.Server.PDA.Ringer;
+using Content.Server.Traitor.Uplink;
+using Content.Shared.Changeling;
+using Content.Shared.Heretic;
+>>>>>>> d1d44d40f8 (first draft)
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -96,6 +103,8 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
     [Dependency] private readonly SharedRevolutionarySystem _revolutionarySystem = default!;
     [Dependency] private readonly ChatSystem _chatSystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly UplinkSystem _uplink = default!;
+
 
     //Used in OnPostFlash, no reference to the rule component is available
     public readonly ProtoId<NpcFactionPrototype> RevolutionaryNpcFaction = "Revolutionary";
@@ -109,7 +118,11 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
         SubscribeLocalEvent<HeadRevolutionaryComponent, AfterRevolutionaryConvertedEvent>(OnPostConvert); // Einstein Engines - Revolutionary Manifesto
         SubscribeLocalEvent<CommunicationConsoleCallShuttleAttemptEvent>(OnTryCallEvac); // goob edit
         SubscribeLocalEvent<HeadRevolutionaryComponent, MobStateChangedEvent>(OnHeadRevMobStateChanged);
+<<<<<<< HEAD
 
+=======
+        SubscribeLocalEvent<RevolutionaryRuleComponent, AfterAntagEntitySelectedEvent>(AfterEntitySelected);
+>>>>>>> d1d44d40f8 (first draft)
         SubscribeLocalEvent<RevolutionaryRoleComponent, GetBriefingEvent>(OnGetBriefing);
 
     }
@@ -118,6 +131,35 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
     {
         base.Started(uid, component, gameRule, args);
         component.CommandCheck = _timing.CurTime + component.TimerWait;
+    }
+
+    private void AfterEntitySelected(Entity<RevolutionaryRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
+    {
+        MakeHeadRevolutionary(args.EntityUid, ent);
+    }
+
+    /// <summary>
+    /// (Funky Station) Adds a revolutionary uplink to HRevs. Makes midround HRevs less awkward,
+    /// now that they aren't dropping their fucking kit in the middle of security.
+    /// </summary>
+    /// <returns>true if uplink was successfully added.</returns>
+    private bool MakeHeadRevolutionary(EntityUid traitor, RevolutionaryRuleComponent component)
+    {
+        if (!_mind.TryGetMind(traitor, out var mindId, out var mind))
+            return false;
+
+        var pda = _uplink.FindUplinkTarget(traitor);
+        if (pda == null || !_uplink.AddUplink(traitor, component.StartingBalance, null, component.UplinkStoreId))
+            return false;
+
+        var code = EnsureComp<RingerUplinkComponent>(pda.Value).Code;
+
+        _antag.SendBriefing(traitor, Loc.GetString("head-rev-role-greeting"), Color.Red, null);
+
+        if (_role.MindHasRole<RevolutionaryRoleComponent>(mindId, out var revRoleComp))
+            AddComp(revRoleComp.Value, new RoleBriefingComponent { Briefing = Loc.GetString("head-rev-briefing", ("code", string.Join("-", code).Replace("sharp", "#"))) }, overwrite: true);
+
+        return true;
     }
 
     protected override void ActiveTick(EntityUid uid, RevolutionaryRuleComponent component, GameRuleComponent gameRule, float frameTime)
@@ -199,7 +241,11 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
     {
         var ent = args.Mind.Comp.OwnedEntity;
         var head = HasComp<HeadRevolutionaryComponent>(ent);
-        args.Append(Loc.GetString(head ? "head-rev-briefing" : "rev-briefing"));
+
+        if (!head)
+        {
+            args.Append(Loc.GetString("rev-briefing"));
+        }
     }
 
     /// <summary>

@@ -1,0 +1,10 @@
+diff a/Resources/Prototypes/_Funkystation/Catalog/revolutionary_catalog.yml b/Resources/Prototypes/_Funkystation/Catalog/revolutionary_catalog.yml	(rejected hunks)
+@@ -68,7 +68,7 @@
+   id: RevolutionaryUplinkExperimentalShades
+   name: sunglasses
+   description: Make yourself look suspicious, in functionality. Has MedHud and SecHud built in. #and Night vision later, add NV and make price 25 when NV added. 
+-  productEntity: ClothingEyesGlassesExp
++  productEntity: ClothingEyesGlassesExperimentalShades
+   cost:
+     RevCoin: 20 
+   categories:

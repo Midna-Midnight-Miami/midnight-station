@@ -21,6 +21,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.NPC.Prototypes;
 using Content.Shared.NPC.Systems;
+using Content.Shared.Popups;
 using Content.Shared.Revolutionary.Components;
 using Content.Shared.Stunnable;
 using Content.Shared.Zombies;
@@ -79,8 +80,14 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
         SubscribeLocalEvent<HeadRevolutionaryComponent, AfterRevolutionaryConvertedEvent>(OnPostConvert); // Einstein Engines - Revolutionary Manifesto
         SubscribeLocalEvent<CommunicationConsoleCallShuttleAttemptEvent>(OnTryCallEvac); // goob edit
         SubscribeLocalEvent<HeadRevolutionaryComponent, MobStateChangedEvent>(OnHeadRevMobStateChanged);
+<<<<<<< HEAD
 
         SubscribeLocalEvent<RevolutionaryRuleComponent, AfterAntagEntitySelectedEvent>(AfterEntitySelected);
+=======
+        SubscribeLocalEvent<HeadRevolutionaryComponent, DeclareOpenRevoltEvent>(OnHeadRevDeclareOpenRevolt); //Funky Station
+
+        SubscribeLocalEvent<RevolutionaryRuleComponent, AfterAntagEntitySelectedEvent>(AfterEntitySelected); // Funky Station
+>>>>>>> d5e04132b7 (Open Revolt feature)
         SubscribeLocalEvent<RevolutionaryRoleComponent, GetBriefingEvent>(OnGetBriefing);
 
     }
@@ -106,8 +113,13 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
     /// <returns>true if uplink was successfully added.</returns>
     private bool MakeHeadRevolutionary(EntityUid traitor, RevolutionaryRuleComponent component)
     {
+        //Sync Open Revolt state effects to new Head Rev
+        if (component.OpenRevoltDeclared && TryComp<HeadRevolutionaryComponent>(traitor, out var headRevComp))
+            _revolutionarySystem.ToggleConvertGivesVision((traitor, headRevComp), true);
+
+        //Add Rev Uplink
         if (!_mind.TryGetMind(traitor, out var mindId, out var mind))
-            return false;
+            return false;        
 
         var pda = _uplink.FindUplinkTarget(traitor);
         if (pda == null || !_uplink.AddUplink(traitor, component.StartingBalance, "Telecrystal", component.UplinkStoreId))
@@ -164,6 +176,29 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
                     colorOverride: Color.Gold);
 
                 component.HasAnnouncementPlayed = true;
+            }
+
+            if (component.OpenRevoltAnnouncementPending)
+            {
+                //Build string for announcement
+                string headRevNameList = "";
+
+                var headRevs = AllEntityQuery<HeadRevolutionaryComponent, MobStateComponent>();
+                while (headRevs.MoveNext(out var headRev, out var headRevComp, out _))
+                {
+                    if (!TryComp<MetaDataComponent>(headRev, out var headRevData))
+                        continue;
+                    if (headRevNameList.Length > 0)
+                        headRevNameList += ", ";
+                    headRevNameList += headRevData.EntityName;
+                }
+
+                _chatSystem.DispatchGlobalAnnouncement(
+                        Loc.GetString("revolutionaries-open-revolt-announcement", ("nameList", headRevNameList)),
+                        Loc.GetString("revolutionaries-sender-cc"),
+                        colorOverride: Color.Red);
+                
+                component.OpenRevoltAnnouncementPending = false;
             }
         }
     }
@@ -246,6 +281,12 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
         _npcFaction.AddFaction(ev.Target, RevolutionaryNpcFaction);
         var revComp = EnsureComp<RevolutionaryComponent>(ev.Target);
 
+        if (comp.ConvertGivesRevVision)
+            EnsureComp<ShowRevolutionaryIconsComponent>(ev.Target);
+
+        _popup.PopupEntity(Loc.GetString("flash-component-user-head-rev",
+            ("victim", Identity.Entity(ev.Target, EntityManager))), ev.Target);
+
         if (ev.User != null)
         {
             _adminLogManager.Add(LogType.Mind,
@@ -311,7 +352,45 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
     private void OnHeadRevMobStateChanged(EntityUid uid, HeadRevolutionaryComponent comp, MobStateChangedEvent ev)
     {
         if (ev.NewMobState == MobState.Dead || ev.NewMobState == MobState.Invalid)
-            CheckRevsLose();
+            if (CheckRevsLose())
+                DeconvertAllRevs();
+    }
+
+    /// <summary>
+    /// Funky Station - yeah
+    /// </summary>
+    private void DeconvertAllRevs()
+    {
+        var stunTime = TimeSpan.FromSeconds(4);
+        var rev = AllEntityQuery<RevolutionaryComponent, MindContainerComponent>();
+
+        while (rev.MoveNext(out var uid, out _, out var mc))
+        {
+            if (HasComp<HeadRevolutionaryComponent>(uid))
+                continue;
+
+            _npcFaction.RemoveFaction(uid, RevolutionaryNpcFaction);
+            _stun.TryParalyze(uid, stunTime, true); // todo: use gamerule
+            RemCompDeferred<RevolutionaryComponent>(uid);
+            RemCompDeferred<ShowRevolutionaryIconsComponent>(uid);
+            _popup.PopupEntity(Loc.GetString("rev-break-control", ("name", Identity.Entity(uid, EntityManager))), uid);
+            _adminLogManager.Add(LogType.Mind, LogImpact.Medium, $"{ToPrettyString(uid)} was deconverted due to all Head Revolutionaries dying.");
+
+            // Goobstation - check if command staff was deconverted
+            if (TryComp<CommandStaffComponent>(uid, out var commandComp))
+                commandComp.Enabled = true;
+
+            if (!_mind.TryGetMind(uid, out var mindId, out _, mc))
+                continue;
+
+            // remove their antag role
+            _role.MindTryRemoveRole<RevolutionaryRoleComponent>(mindId);
+
+            // make it very obvious to the rev they've been deconverted since
+            // they may not see the popup due to antag and/or new player tunnel vision
+            if (_mind.TryGetSession(mindId, out var session))
+                _euiMan.OpenEui(new DeconvertedEui(), session);
+        }
     }
 
     /// <summary>
@@ -391,6 +470,17 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
         }
     }
 
+    // funky station
+    public void OnTryShuttleDock(ref ShuttleDockAttemptEvent ev)
+    {
+        if (!CheckRevsLose())
+        {
+            ev.Cancelled = true;
+            ev.CancelMessage = Loc.GetString("shuttle-dock-fail-revs");
+            DeclareOpenRevolt();
+        }
+    }
+
     /// <summary>
     /// Will take a group of entities and check if these entities are alive, dead or cuffed.
     /// </summary>
@@ -440,6 +530,43 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
         }
 
         return gone == list.Count || list.Count == 0;
+    }
+
+    /// <summary>
+    /// Declares a state of Open Revolt. This allows all Revolutionaries to see each other, at the cost of announcing openly the names of the Head Revolutionaries
+    /// </summary>
+    private void DeclareOpenRevolt()
+    {
+        var query = QueryActiveRules();
+        while (query.MoveNext(out var uid, out _, out var revolutionaryRule, out _))
+        {
+            if (revolutionaryRule.OpenRevoltDeclared)
+                return;
+
+            revolutionaryRule.OpenRevoltDeclared = true;
+            //Queue announcement
+            revolutionaryRule.OpenRevoltAnnouncementPending = true;
+        }
+
+        var headRevs = AllEntityQuery<HeadRevolutionaryComponent, MobStateComponent>();
+        while (headRevs.MoveNext(out var uid, out var headRevComp, out _))
+        {
+            _revolutionarySystem.ToggleConvertGivesVision((uid, headRevComp), true);
+        }
+
+        //Make All Revs see each other's Rev status
+        var rev = AllEntityQuery<RevolutionaryComponent, MindContainerComponent>();
+        while (rev.MoveNext(out var uid, out _, out var mc))
+        {
+            EnsureComp<ShowRevolutionaryIconsComponent>(uid);
+            _popup.PopupEntity(Loc.GetString("revolutionaries-open-revolt-rev-popup"), uid, uid, PopupType.LargeCaution);
+        }
+    }
+
+    private void OnHeadRevDeclareOpenRevolt(EntityUid uid, HeadRevolutionaryComponent comp, DeclareOpenRevoltEvent args)
+    {
+        DeclareOpenRevolt();
+        args.Handled = true;
     }
 
     private static readonly string[] Outcomes =

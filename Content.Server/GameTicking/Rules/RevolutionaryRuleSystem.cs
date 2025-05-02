@@ -80,14 +80,9 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
         SubscribeLocalEvent<HeadRevolutionaryComponent, AfterRevolutionaryConvertedEvent>(OnPostConvert); // Einstein Engines - Revolutionary Manifesto
         SubscribeLocalEvent<CommunicationConsoleCallShuttleAttemptEvent>(OnTryCallEvac); // goob edit
         SubscribeLocalEvent<HeadRevolutionaryComponent, MobStateChangedEvent>(OnHeadRevMobStateChanged);
-<<<<<<< HEAD
-
-        SubscribeLocalEvent<RevolutionaryRuleComponent, AfterAntagEntitySelectedEvent>(AfterEntitySelected);
-=======
         SubscribeLocalEvent<HeadRevolutionaryComponent, DeclareOpenRevoltEvent>(OnHeadRevDeclareOpenRevolt); //Funky Station
 
         SubscribeLocalEvent<RevolutionaryRuleComponent, AfterAntagEntitySelectedEvent>(AfterEntitySelected); // Funky Station
->>>>>>> d5e04132b7 (Open Revolt feature)
         SubscribeLocalEvent<RevolutionaryRoleComponent, GetBriefingEvent>(OnGetBriefing);
 
     }
@@ -467,17 +462,6 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
             ev.Cancelled = true;
             ev.Reason = Loc.GetString("shuttle-call-error");
             return;
-        }
-    }
-
-    // funky station
-    public void OnTryShuttleDock(ref ShuttleDockAttemptEvent ev)
-    {
-        if (!CheckRevsLose())
-        {
-            ev.Cancelled = true;
-            ev.CancelMessage = Loc.GetString("shuttle-dock-fail-revs");
-            DeclareOpenRevolt();
         }
     }
 

@@ -1,0 +1,65 @@
+## Salvage and Cuptain Plushie by GibustheGibus!
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieSalv
+  name: salvager plushie
+  description: Our knights in brown. Now in plush form!
+  components:
+  - type: Sprite
+    state: plushie_salv
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/toysqueak1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Mining/fultext_deploy.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/toysqueak1.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Items/Toys/toysqueak1.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Items/Toys/toysqueak1.ogg
+  - type: Food
+    requiresSpecialDigestion: true
+    useSound:
+      path: /Audio/Items/Toys/mousesqueek.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Items/drill_hit.ogg
+
+- type: entity
+  parent: [ BasePlushie, BaseCentcommContraband ]
+  id: PlushieCuptain
+  name: cuptain plushie
+  description: It's your fault if you listen to them.
+  components:
+  - type: Sprite
+    state: plushie_cuptain
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: Food
+    requiresSpecialDigestion: true
+    useSound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Items/Toys/weh.ogg

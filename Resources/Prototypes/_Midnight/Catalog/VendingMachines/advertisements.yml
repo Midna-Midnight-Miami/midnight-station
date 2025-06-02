@@ -1,0 +1,7 @@
+#
+
+- type: localizedDataset
+  id: NewsDrobeAds
+  values:
+    prefix: advertisement-news-
+    count: 8

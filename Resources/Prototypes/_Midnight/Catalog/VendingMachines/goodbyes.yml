@@ -1,0 +1,7 @@
+#
+
+- type: localizedDataset
+  id: NewsDrobeGoodbyes
+  values:
+    prefix: thankyou-news-
+    count: 4

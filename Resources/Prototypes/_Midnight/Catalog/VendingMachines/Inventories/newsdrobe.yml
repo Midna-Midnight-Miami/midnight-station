@@ -1,0 +1,19 @@
+#
+
+- type: vendingMachineInventory
+  id: NewsDrobeInventory
+  startingInventory:
+    ClothingUniformJumpsuitReporter: 1
+    ClothingUniformJumpsuitJournalist: 1
+    ClothingHeadsetService: 2
+    MicrophoneInstrument: 2
+    SurveillanceWirelessCameraBodyEntertainment: 2
+    BoxFolderClipboard: 2
+    Paper: 6
+  contrabandInventory:
+    ClothingUniformJumpsuitDetectiveGrey: 1
+    ClothingUniformJumpskirtDetectiveGrey: 1
+    ClothingOuterCoatField: 1
+  emaggedInventory:
+    CameraBug: 1
+    EncryptionKeySmuggler: 1

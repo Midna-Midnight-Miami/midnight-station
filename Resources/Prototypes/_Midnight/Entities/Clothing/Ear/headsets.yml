@@ -1,0 +1,30 @@
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetCommandFake
+  name: command headset
+  description: A headset with a pretty exterior.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyStationMasterFake
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/command.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/command.rsi
+
+- type: entity
+  parent: [ClothingHeadset, BaseSecurityLawyerContraband]
+  id: ClothingHeadsetLaw
+  name: Lawyer Headset
+  description: This is used by the station lawyers. It smells like cigarettes.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyLaw
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/law.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/law.rsi

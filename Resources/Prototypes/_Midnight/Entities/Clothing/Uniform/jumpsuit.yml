@@ -1,0 +1,12 @@
+#
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSyndieFormalCiv
+  name: mercenary formal suit
+  description: A formal garb used by some mercenary groups when off duty.
+  components:
+  - type: Sprite
+    sprite: _Midnight/Clothing/Uniforms/Jumpsuit/syndieformalciv.rsi
+  - type: Clothing
+    sprite: _Midnight/Clothing/Uniforms/Jumpsuit/syndieformalciv.rsi

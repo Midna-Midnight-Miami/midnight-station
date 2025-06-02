@@ -1,0 +1,12 @@
+#
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtSyndieFormalDressCiv
+  name: mercenary formal dress
+  description: A formal garb used by some mercenary groups when off duty.
+  components:
+    - type: Sprite
+      sprite: _Midnight/Clothing/Uniforms/Jumpskirt/syndieformaldressciv.rsi
+    - type: Clothing
+      sprite: _Midnight/Clothing/Uniforms/Jumpskirt/syndieformaldressciv.rsi

@@ -1,0 +1,40 @@
+#
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatField
+  name: field coat
+  description: A packed coat for reporting even on the most rough scenes. It has deep pockets!
+  components:
+  - type: Sprite
+    sprite: _Midnight/Clothing/OuterClothing/Coats/fieldcoat.rsi
+  - type: Clothing
+    sprite: _Midnight/Clothing/OuterClothing/Coats/fieldcoat.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 0.1
+    coolingCoefficient: 0.1
+  - type: Armor
+    coverage:
+    - Chest
+    - Groin
+    - Tail
+    - Arm
+    - Leg
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.82
+        Piercing: 0.92
+        Heat: 0.95
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: Storage
+    grid:
+    - 0,0,4,1
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 30

@@ -1,0 +1,39 @@
+#
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineNewsDrobe
+  name: NewsDrobe
+  description: Slander is spoken. In print, it's libel.
+  components:
+  - type: VendingMachine
+    pack: NewsDrobeInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+  - type: Advertise
+    pack: NewsDrobeAds
+  - type: SpeakOnUIClosed
+    pack: NewsDrobeGoodbyes
+  - type: Sprite
+    sprite: _Midnight/Structures/Machines/VendingMachines/newsdrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 2
+    energy: 1.6
+    color: "#00fec4"
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: AccessReader
+    access: [["Service"]]
+  - type: Tag
+    tags:
+      - DroneUsable # Goobstation

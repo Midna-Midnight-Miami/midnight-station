@@ -166,16 +166,19 @@
   name: selectable-set-syndicate-implants-name
   description: selectable-set-syndicate-implants-description
   sprite:
-    sprite: Objects/Specific/Medical/syndi_implanter.rsi
-    state: implanter0
+    sprite: _Goobstation/Clothing/OuterClothing/Coats/david_jacket.rsi
+    state: icon
   content:
   - RadioImplanter
-  - BoxHoloparasite
   - EmpImplanter
   - ScramImplanter
   - FreedomImplanter
   - SmokeImplanter
-#  - KravMagaImplanter
+  - KravMagaImplanter
+  - ClothingOuterDavidsJacketValid
+  - AutosurgeonRightMantisBlade
+  - AutosurgeonLeftMantisBlade
+  - AutosurgeonSandevistan
 
 - type: selectableSet
   id: SyndicateHackerSet
@@ -257,6 +260,8 @@
     - EncryptionKeySyndie
     - EncryptionKeySyndie
     - EncryptionKeySyndie
+    - EncryptionKeySyndie
+    - EncryptionKeySyndie
     - ContractorBaton
     - Handcuffs
     - MindcontrolImplanter
@@ -266,28 +271,29 @@
     - WeaponSniperMosin
     - WeaponSniperMosin
     - WeaponSniperMosin
+    - WeaponSniperMosin
 
-#- type: selectableSet
-#  id: SyndicateCarpSet
-#  name: selectable-set-syndicate-carp-name
-#  description: selectable-set-syndicate-carp-description
-#  sprite:
-#    sprite: Objects/Fun/toys.rsi
-#    state: carpplush
-#  content:
-#    - EncryptionKeySyndie
-#    - SleepingCarpScroll
-#    - DehydratedSpaceCarp # 1
-#    - DehydratedSpaceCarp # 2
-#    - DehydratedSpaceCarp # 3
-#    - DehydratedSpaceCarp # 4
-#    - DehydratedSpaceCarp # 5
-#    - DehydratedSpaceCarp # 6
-#    - DehydratedSpaceCarp # 7
-#    - DehydratedSpaceCarp # 8
-#    - DehydratedSpaceCarp # 9
-#    - DehydratedSpaceCarp # 10
-#    - FireExtinguisher
+- type: selectableSet
+  id: SyndicateCarpSet
+  name: selectable-set-syndicate-carp-name
+  description: selectable-set-syndicate-carp-description
+  sprite:
+    sprite: Objects/Fun/toys.rsi
+    state: carpplush
+  content:
+    - EncryptionKeySyndie
+    - SleepingCarpScroll
+    - DehydratedSpaceCarp # 1
+    - DehydratedSpaceCarp # 2
+    - DehydratedSpaceCarp # 3
+    - DehydratedSpaceCarp # 4
+    - DehydratedSpaceCarp # 5
+    - DehydratedSpaceCarp # 6
+    - DehydratedSpaceCarp # 7
+    - DehydratedSpaceCarp # 8
+    - DehydratedSpaceCarp # 9
+    - DehydratedSpaceCarp # 10
+    - FireExtinguisher
 
 # Blueshield officer
 
@@ -311,15 +317,15 @@
   content:
     - ClothingBeltHolsterFilledBlueshield # Pistol, 1+2 lethal speedloaders and 2 disabler speedloaders
 
-#- type: selectableSet
-#  id: BSOCQCSet
-#  name: selectable-set-blueshield-cqc-name
-#  description: selectable-set-blueshield-cqc-description
-#  sprite:
-#    sprite: _Goobstation/Objects/Misc/cqc_manual.rsi
-#    state: icon-alt
-#  content:
-#    - BSOManual
+- type: selectableSet
+  id: BSOCQCSet
+  name: selectable-set-blueshield-cqc-name
+  description: selectable-set-blueshield-cqc-description
+  sprite:
+    sprite: _Goobstation/Objects/Misc/cqc_manual.rsi
+    state: icon-alt
+  content:
+    - BSOManual
 
 - type: selectableSet
   id: BSOChesterSet

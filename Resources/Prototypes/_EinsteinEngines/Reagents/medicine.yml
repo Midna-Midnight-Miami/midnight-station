@@ -30,9 +30,6 @@
             Bloodloss: -5
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Yowie
-          shouldHave: false
         - !type:ReagentThreshold
           min: 11
         damage:

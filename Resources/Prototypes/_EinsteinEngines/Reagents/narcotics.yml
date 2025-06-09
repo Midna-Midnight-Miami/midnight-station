@@ -17,8 +17,6 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Yowie
         damage:
           groups:
             Brute: -1
@@ -42,9 +40,6 @@
         time: 30
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Yowie
-          shouldHave: false
         - !type:ReagentThreshold
           reagent: Morphine
           min: 16

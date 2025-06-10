@@ -8,7 +8,6 @@
 
 using Robust.Shared.Serialization;
 using Content.Shared.Cargo.Prototypes;
-using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Cargo;
 
@@ -35,5 +34,35 @@ public readonly partial record struct CargoBountyData
     {
         Bounty = bounty.ID;
         Id = $"{bounty.IdPrefix}{uniqueIdentifier:D3}";
+    }
+
+    /// <summary>
+    /// Used for creating bounties via the old system with pre-defined bounties
+    /// </summary>
+    /// <param name="uniqueIdentifier">Some number to be used as an ID with IdPrefix</param>
+    /// <param name="prototype">The prototype of the bounty to be created</param>
+    public CargoBountyData(int uniqueIdentifier, CargoBountyPrototype prototype)
+    {
+        Id = $"{IdPrefix}{uniqueIdentifier:D3}";
+        Description = prototype.Description;
+        IdPrefix = prototype.IdPrefix;
+        Reward = prototype.Reward;
+        var items = new List<CargoBountyItemData>();
+        foreach (var entry in prototype.Entries)
+        {
+            CargoBountyItemData newItem = entry switch
+            {
+                CargoObjectBountyItemEntry itemEntry => new CargoObjectBountyItemData(itemEntry),
+                CargoReagentBountyItemEntry itemEntry => new CargoReagentBountyItemData(itemEntry),
+                _ => throw new NotImplementedException($"Unknown type: {entry.GetType().Name}"),
+            };
+            items.Add(newItem);
+        }
+        Entries = items;
+    }
+
+    public CargoBountyData()
+    {
+
     }
 }

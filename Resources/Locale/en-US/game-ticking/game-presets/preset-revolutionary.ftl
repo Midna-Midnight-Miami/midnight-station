@@ -16,6 +16,11 @@ head-rev-briefing =
     You have an uplink granted by your handlers at Cybersun.
     Your uplink code is: {$code}
 
+head-rev-briefing-implant =
+    Use flashes to convert people to your cause.
+    Convert, kill or exile command personnel.
+    You have an uplink granted by your handlers at Cybersun.
+
 head-rev-break-mindshield = The Mindshield neutralized hypnotic powers, but its functionality has been compromised!
 
 ## Rev

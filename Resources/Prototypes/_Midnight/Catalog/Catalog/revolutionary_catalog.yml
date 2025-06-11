@@ -1,9 +1,23 @@
-# conversion - starter tools and upgrades for the mind control specialist
+# conversion
 - type: listing
   id: RevolutionaryUplinkStarterFlash
   name: starter flash
   description: Standard-issue conversion tool. You are trained to use this.
   productEntity: SciFlash
+  cost:
+    Telecrystal: 0
+  categories:
+   - RevolutionaryUplinkConversion
+  conditions:
+   - !type:ListingLimitedStockCondition
+     stock: 1
+     saleLimit: 1
+
+- type: listing
+  id: RevolutionaryUplinkStarterKey
+  name: starter encryption key
+  description: Encrypted comms for operational coordination. Standard issue.
+  productEntity: EncryptionKeySyndie
   cost:
     Telecrystal: 0
   categories:
@@ -47,7 +61,7 @@
   description: Instead of a standard flash bulb, uses a quartz tube with xenon gas. Recharging battery included.
   productEntity: RechargeFlash
   cost:
-    Telecrystal: 40
+    Telecrystal: 30
   categories:
    - RevolutionaryUplinkConversion
   conditions:
@@ -55,20 +69,7 @@
      stock: 1
      saleLimit: 1
 
-# utility - coordination and infiltration tools
-- type: listing
-  id: RevolutionaryUplinkStarterKey
-  name: starter encryption key
-  description: Encrypted comms for operational coordination. Standard issue.
-  productEntity: EncryptionKeySyndie
-  cost:
-    Telecrystal: 0
-  categories:
-   - RevolutionaryUplinkConversion
-  conditions:
-   - !type:ListingLimitedStockCondition
-     stock: 1
-     saleLimit: 1
+# utility
 
 - type: listing
   id: RevolutionaryUplinkSunglasses
@@ -82,11 +83,11 @@
 
 - type: listing
   id: RevolutionaryUplinkExperimentalShades
-  name: experimental shades
+  name: Experimental shades
   description: Sunglasses with a MedSec Hud built in.
   productEntity: ClothingEyesGlassesExperimentalShades
   cost:
-    Telecrystal: 35
+    Telecrystal: 40
   categories:
    - RevolutionaryUplinkUtility
 
@@ -103,7 +104,7 @@
 - type: listing
   id: RevolutionaryUplinkFastDrawImplanter
   name: fast draw implanter
-  description: Show them the light with fresh eyes. Gold-starred for quality assurance.
+  description: Remove implants and crush them for good measure. Gold-starred for quality assurance.
   productEntity: RevsFastDrawImplanter
   cost:
     Telecrystal: 20
@@ -124,7 +125,7 @@
 - type: listing
   id: RevolutionaryUplinkMosin
   name: kardashev-mosin
-  description: Practically neolithic rifle pattern somehow still in production. Cheap as dirt.
+  description: Practically neolithic rifle pattern somehow still in production. Cheap as dirt. Feels overpriced.
   productEntity: WeaponSniperMosin
   cost:
     Telecrystal: 10
@@ -132,9 +133,19 @@
    - RevolutionaryUplinkCombat
 
 - type: listing
+  id: RevolutionaryUplinkBulkMosin
+  name: Bulk kardashev-mosin
+  description: Buy 5, get 5 free. Still feels overpriced, somehow.
+  productEntity: CrateSyndicateBulkMosin
+  cost:
+    Telecrystal: 50
+  categories:
+    - RevolutionaryUplinkCombat
+
+- type: listing
   id: RevolutionaryUplinkAK
   name: AKM
-  description: Your journy to victory has just begun, death to Nanotrasen.
+  description: Your journey to victory has just begun, death to Nanotrasen.
   productEntity: WeaponRifleAk
   cost:
     Telecrystal: 75
@@ -155,12 +166,12 @@
   categories:
    - RevolutionaryUplinkCombat
 
-# misc - specialized equipment for unique situations
+# misc
 - type: listing
-  id: RevolutionaryUplinkJawsOfLife
+  id: RevolutionaryUplinkSyndicateJawsOfLife
   name: jaws of life
   description: Pry open locked doors. Keeps you from getting stuck, and doubles as a crowbar/wirecutter combo.
-  productEntity: JawsOfLife
+  productEntity: SyndicateJawsOfLife
   cost:
     Telecrystal: 40
   categories:

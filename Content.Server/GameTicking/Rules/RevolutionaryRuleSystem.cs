@@ -111,24 +111,44 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
         //Sync Open Revolt state effects to new Head Rev
         if (component.OpenRevoltDeclared && TryComp<HeadRevolutionaryComponent>(traitor, out var headRevComp))
             _revolutionarySystem.ToggleConvertGivesVision((traitor, headRevComp), true);
-
+    
         //Add Rev Uplink
         if (!_mind.TryGetMind(traitor, out var mindId, out var mind))
-            return false;        
-
-        var pda = _uplink.FindUplinkTarget(traitor);
-        if (pda == null || !_uplink.AddUplink(traitor, 50, "Telecrystal", component.UplinkStoreId))
             return false;
 
-        var code = EnsureComp<RingerUplinkComponent>(pda.Value).Code;
+        var pda = _uplink.FindUplinkTarget(traitor);
+        EntityUid? uplinkEntity = null;
+        
+        if (pda != null && _uplink.AddUplink(traitor, 50, "Telecrystal", component.UplinkStoreId, pda))
+        {
+            uplinkEntity = pda;
+        }
+        else
+        {
+            // Fallback to implant with 5 TC cost (45 TC remaining)
+            if (!_uplink.ImplantUplink(traitor, 45, component.UplinkStoreId))
+                return false;
+            // For implants, we don't have a ringer code, so we'll skip that part
+            _antag.SendBriefing(traitor, Loc.GetString("head-rev-role-greeting"), Color.Red, null);
+        
+            if (_role.MindHasRole<RevolutionaryRoleComponent>(mindId, out var revRoleComp))
+                AddComp(revRoleComp.Value, new RoleBriefingComponent { Briefing = Loc.GetString("head-rev-briefing-implant") }, overwrite: true);
+            
+            return true;
+        }
 
-        _antag.SendBriefing(traitor, Loc.GetString("head-rev-role-greeting"), Color.Red, null);
+        // Only get ringer code if we successfully added uplink to PDA
+        if (uplinkEntity.HasValue)
+        {
+            var code = EnsureComp<RingerUplinkComponent>(uplinkEntity.Value).Code;
+            _antag.SendBriefing(traitor, Loc.GetString("head-rev-role-greeting"), Color.Red, null);
+    
+            if (_role.MindHasRole<RevolutionaryRoleComponent>(mindId, out var revRoleComp))
+                AddComp(revRoleComp.Value, new RoleBriefingComponent { Briefing = Loc.GetString("head-rev-briefing", ("code", string.Join("-", code).Replace("sharp", "#"))) }, overwrite: true);
+        }
 
-        if (_role.MindHasRole<RevolutionaryRoleComponent>(mindId, out var revRoleComp))
-            AddComp(revRoleComp.Value, new RoleBriefingComponent { Briefing = Loc.GetString("head-rev-briefing", ("code", string.Join("-", code).Replace("sharp", "#"))) }, overwrite: true);
-
-        return true;
-    }
+    return true;
+}
 
     protected override void ActiveTick(EntityUid uid, RevolutionaryRuleComponent component, GameRuleComponent gameRule, float frameTime)
     {

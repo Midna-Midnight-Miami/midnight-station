@@ -102,6 +102,42 @@ public sealed class UplinkSystem : EntitySystem
     }
 
     /// <summary>
+    /// Implant an uplink as a fallback measure if the user had no PDA
+    /// </summary>
+    /// <param name="user">The user to implant the uplink in</param>
+    /// <param name="balance">The TC balance for the uplink</param>
+    /// <param name="storePreset">The store catalog to use for the uplink</param>
+    /// <returns>Whether the implant was successfully added</returns>
+    public bool ImplantUplink(EntityUid user, FixedPoint2 balance, EntProtoId storePreset)
+    {
+        var implantProto = new string(FallbackUplinkImplant);
+
+        var implant = _subdermalImplant.AddImplant(user, implantProto);
+
+        if (!HasComp<StoreComponent>(implant))
+            return false;
+
+        if (HasComp<StoreComponent>(implant.Value))
+        {
+            EnsureComp<StoreComponent>(implant.Value, out var implantStore);
+
+            var ent = Spawn(storePreset);
+            if (!TryComp<StoreComponent>(ent, out var comp))
+                return false;
+
+            implantStore.Categories = comp.Categories;
+            implantStore.CurrencyWhitelist = comp.CurrencyWhitelist;
+            implantStore.Name = comp.Name;
+            implantStore.RefundAllowed = comp.RefundAllowed;
+
+            QueueDel(ent);
+        }
+
+        SetUplink(user, implant.Value, balance);
+        return true;
+    }
+
+    /// <summary>
     /// Implant an uplink as a fallback measure if the traitor had no PDA
     /// </summary>
     private bool ImplantUplink(EntityUid user, FixedPoint2 balance)

@@ -1,32 +1,18 @@
-# SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2023 Vasilis <vasilis@pikachu.systems>
-# SPDX-FileCopyrightText: 2023 coolmankid12345 <55817627+coolmankid12345@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2023 coolmankid12345 <coolmankid12345@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
-# SPDX-FileCopyrightText: 2024 BombasterDS <115770678+BombasterDS@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2024 Killerqu00 <47712032+Killerqu00@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2024 Mr. 27 <45323883+Dutch-VanDerLinde@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 ## Rev Head
 
 roles-antag-rev-head-name = Head Revolutionary
-roles-antag-rev-head-objective = Your objective is to take over the station by converting people to your cause and killing all Command staff on station.
+roles-antag-rev-head-objective = Your mission is to take over the station by converting people to your cause and killing all Command staff on station.
 
 head-rev-role-greeting =
-    You are a Head Revolutionary.
-    You are tasked with removing all of Command from station via death, exilement or imprisonment.
-    The Syndicate has sponsored you with a manifesto that persuades the crew to your side.
-    Beware, this won't work on Security or Command - their loyalty is unwavering.
+    You are a Head Revolutionary, a Cybersun mind control specialist.
+    Convert, kill, or exile all Command personnel from this station.
+    Try to keep the station in one piece. You want to rule over more than ashes, right?.
+    Beware, this won't work on mindshielded personnel, like Security or Command.
     Viva la revolución!
 
 head-rev-briefing =
     Use flashes to convert people to your cause.
-    Eliminate all heads of staff, and secure the station.
+    Convert, kill or exile command personnel.
     You have an uplink granted by your handlers at Cybersun.
     Your uplink code is: {$code}
 
@@ -58,7 +44,7 @@ rev-no-heads = There were no Head Revolutionaries to be selected. Can't start a 
 
 rev-won = The Head Revs survived and successfully seized control of the station.
 
-rev-lost = Command survived and neutralized all of the Head Revs.
+rev-lost = Command survived and neutralized revolutionary cells.
 
 rev-stalemate = All of the Head Revs and Command died. It's a draw.
 

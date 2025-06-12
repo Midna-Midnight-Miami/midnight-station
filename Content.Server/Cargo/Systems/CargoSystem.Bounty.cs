@@ -7,6 +7,9 @@ using Content.Shared.Access.Components;
 using Content.Shared.Cargo;
 using Content.Shared.Cargo.Components;
 using Content.Shared.Cargo.Prototypes;
+using Content.Shared.Chemistry.Components.SolutionManager;
+using Content.Shared.Chemistry.EntitySystems;
+using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Database;
 using Content.Shared.IdentityManagement;
 using Content.Shared.NameIdentifier;
@@ -27,7 +30,9 @@ public sealed partial class CargoSystem
     [Dependency] private readonly ContainerSystem _container = default!;
     [Dependency] private readonly NameIdentifierSystem _nameIdentifier = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSys = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly SharedResearchSystem _research = default!;
+    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
 
     [ValidatePrototypeId<NameIdentifierGroupPrototype>]
     private const string BountyNameIdentifierGroup = "Bounty";
@@ -345,7 +350,24 @@ public sealed partial class CargoSystem
 
     public bool IsValidBountyEntry(EntityUid entity, CargoReagentBountyItemData reagentBounty)
     {
-        throw new NotImplementedException();
+        if (!TryComp<SolutionContainerManagerComponent>(entity, out var solutions))
+            return false;
+
+        if (!_protoMan.TryIndex(reagentBounty.Reagent, out var bounty))
+            return false;
+
+        foreach (var (_, soln) in _solutionContainer.EnumerateSolutions((entity, solutions)))
+        {
+            var solution = soln.Comp.Solution;
+
+            foreach (var sol in solution.Contents)
+            {
+                if (sol.Reagent.Prototype.Equals(bounty.ID))
+                    return true;
+            }
+        }
+
+        return false;
     }
 
     public bool IsValidBountyEntry(EntityUid entity, CargoObjectBountyItemEntry entry)
@@ -382,7 +404,48 @@ public sealed partial class CargoSystem
                 entityReqs[entity].Add(entry);
             }
 
-            if (count < entry.Amount)
+        var remaining = new Dictionary<CargoBountyItemData, int>();
+        foreach (var e in entries)
+        {
+            remaining[e] = e.Amount;
+        }
+
+        var sorted = entityReqs.OrderBy(kvp => kvp.Value.Count).ToList();
+        foreach (var (entity, possibleEntries) in sorted)
+        {
+            var chosenEntry = possibleEntries.FirstOrDefault(b => remaining.ContainsKey(b) && remaining[b] > 0);
+
+            if (chosenEntry == null)
+                continue;
+            bountyEntities.Add(entity);
+            switch (chosenEntry)
+            {
+                case CargoObjectBountyItemData bountyItem:
+                    remaining[chosenEntry]--;
+                    break;
+                case CargoReagentBountyItemData bountyItem:
+                    if (!TryComp<SolutionContainerManagerComponent>(entity, out var solutions))
+                        continue;
+                    foreach (var (_, soln) in _solutionContainer.EnumerateSolutions((entity, solutions)))
+                    {
+                        var solution = soln.Comp.Solution;
+
+                        foreach (var sol in solution.Contents)
+                        {
+                            if (sol.Reagent.Prototype.Equals(bountyItem.Reagent.Id))
+                                remaining[chosenEntry] -= sol.Quantity.Value / 100;
+                        }
+                    }
+
+                    break;
+            }
+
+        }
+
+        foreach (var e in remaining)
+        {
+            if (e.Value > 0)
+            {
                 return false;
 
             foreach (var ent in temp)

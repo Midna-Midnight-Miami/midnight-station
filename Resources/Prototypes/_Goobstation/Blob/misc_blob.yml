@@ -86,7 +86,7 @@
   - type: MindRole
     antagPrototype: Blob
     exclusiveAntag: true
-    roleType: SoloAntagonist
+    roleType: MajorAntagonist
   - type: BlobRole
 
 - type: factionIcon

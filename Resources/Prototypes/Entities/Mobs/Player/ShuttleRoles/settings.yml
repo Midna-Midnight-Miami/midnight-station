@@ -885,5 +885,5 @@
       name: job-name-cuptain
       description: job-description-cuptain
     - type: Loadout
-      prototypes: CaptainFake
+      prototypes: [ CaptainFake ]
       roleLoadout: [ RoleSurvivalStandard ]

@@ -9,33 +9,45 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
 <Document>
-  # Roleplay Rule 9 - As an antagonist, do not cause excessive death, damage, or destruction beyond your objectives
-  This rule is not intended to disallow reasonable steps taken to complete your objectives. As an antagonist, you can always kill in bona fide self defense. Taking steps to permanently round remove many people who are no longer an immediate threat to you is almost always excessive, even if it is done to prevent yourself from being discovered.
+  # Roleplay Rule 9 - Do not cause disruption disproportionate to your severity
 
-  This rule is not intended to disallow all antagonist activity unrelated to objectives. Antagonists may cause a level of disruption to the station that is proportional to their objectives, even if it is unrelated to their objectives. As an antagonist, killing a single person in a round is not on its own be a violation of this rule.
+  All roles have a severity, do not act as though you are a higher severity than you are.
+  
+  Even if your severity allows for an action, massive destruction that goes against your goals is considered a violation of this rule. All team antagonists have an implicit goal to keep teammates alive unless otherwise stated.
+  All actions allowable to lower severity roles are considered acceptable for higher ones (EG. A major antag can do anything a minor can, a free agent can act as though they are crew-aligned if they wish, etc.)
 
-  ## MRP Amendment
+  Do not make the Emergency Shuttle uninhabitable or otherwise cause excessive death, damage, or destruction to the Emergency Shuttle.
 
-  As an antagonist, do not make the Emergency Shuttle uninhabitable or otherwise cause excessive death, damage, or destruction to the Emergency Shuttle.
+---
+ - Crew-aligned - Without extenuating circumstances, assist the station during emergencies and contribute positively to operations. You may still be difficult, demanding, or unpleasant.
 
+ - Non-antagonist - Without extenuating circumstances, do not actively harm the crew or assist known antagonists. You may pursue personal goals, be obstructive, or create minor conflicts.
+
+ - Free agent - Without extenuating circumstances, pursue your own agenda. Avoid mass destruction and follow escalation rules. You may steal, scheme, or cause targeted disruption.  
+
+ - Minor antag - Without extenuating circumstances, work towards your objectives without massively disrupting or maiming the crew. You are not a senseless murderer, ruthless saboteur or professional spy.
+
+ - Moderate Antag  - Without extenuating circumstances, actively oppose the crew to achieve your objectives. Try to avoid casualties unrelated to your goals or self-preservation.
+
+ - Major antag - you have a one way ticket to the reaper already, are divine in nature, or your mission is worth any cost. You may act as you see fit as long as it does not contradict your goals.
+---
   ## Exemptions
   The "die a glorious death"(DAGD) objective allows antagonists to ignore this rule entirely. You can do practically anything you want with DAGD.
+  If you would be considered Non-Antagonist, and you are mindshielded, you are crew-aligned. Mindshields do not remove your antag or free agent status unless that happens mechanically.
 
   ## Examples
   Acceptable:
   - Permanently round removing people who you have the objective to kill.
-  - Killing anyone you see as a nuclear operative.
+  - Killing anyone you see as a major antag.
   - Permanently round removing a single person so that you can impersonate them to make it easier for you to complete a steal objective.
   - Sabotaging station power 10 minutes into the round to try to get the shuttle called because you've completed all of your other objectives and have one to escape on the shuttle alive.
-  - Sabotaging a department's power 10 minutes into the round to make a steal objective easier to accomplish.
-  - Permanently round removing many people who have demonstrated a persistence and a capability to either kill you or interfere with the completion of your objectives.
+  - As a free agent, abotaging a department's power 10 minutes into the round to make a steal objective easier to accomplish.
+  - As a moderate antag, permanently round removing many people who have demonstrated a persistence and a capability to either kill you or interfere with the completion of your objectives.
   - Causing massive station damage and chaos as an antagonist with the "die a glorious death" objective.
 
   Prohibited:
-  - As a traitor with 3 kill objectives, taking steps to permanently round remove many non-objective people who are no longer an immediate threat to you, even if it is done to prevent yourself from being discovered.
+  - As a moderate antag with 3 kill objectives, taking steps to permanently round remove many non-objective people who are no longer an immediate threat to you, even if it is done to prevent yourself from being discovered.
   - Setting up an electrified grille in maintenance and using it to kill anyone who walks into it with the hope that one of your objectives will be one of them.
-  - Sabotaging power station-wide 10 minutes into the round to make a steal objective easier to accomplish.
+  - Sabotaging power station-wide 10 minutes into the round as a minor antag.
 
-  Grey area:
-  - Evacuation shuttle bombing. It is recommended you at least attempt to complete your objective on station before you consider evac bombing.
 </Document>

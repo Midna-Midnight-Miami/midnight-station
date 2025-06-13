@@ -56,7 +56,7 @@ public sealed class RoleSystem : SharedRoleSystem
 
         string roleText;
         Color color;
-        #Midnight
+        //Midnight
         // Check if player is non-antagonist and has MindShield component
         if (proto.Name == "role-type-non-antagonist-name" && 
             mind.OwnedEntity is {} ownedEntity &&
@@ -65,7 +65,7 @@ public sealed class RoleSystem : SharedRoleSystem
             roleText = Loc.GetString("role-type-crew-aligned-name");
             color = Color.FromHex("#008000"); // Green color for crew-aligned
         }
-        #Midnight end
+        //Midnight end
         else
         {
             roleText = Loc.GetString(proto.Name);

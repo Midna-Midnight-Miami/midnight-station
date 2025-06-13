@@ -6,8 +6,11 @@ roles-antag-rev-head-objective = Your mission is to take over the station by con
 head-rev-role-greeting =
     You are a Head Revolutionary, a Cybersun mind control specialist.
     Convert, kill, or exile all Command personnel from this station.
-    Try to keep the station in one piece. You want to rule over more than ashes, right?.
-    Beware, this won't work on mindshielded personnel, like Security or Command.
+    Try to keep the station in one piece. You want to rule over more than ashes, right?
+
+    You are trained to brainwash personnel using a standard flash.
+    Beware, this won't work on mindshielded personnel, or those with eye protection.
+
     Viva la revolución!
 
 head-rev-briefing =

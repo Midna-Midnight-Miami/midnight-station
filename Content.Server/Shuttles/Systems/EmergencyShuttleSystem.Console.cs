@@ -80,7 +80,6 @@ using Robust.Shared.Player;
 using Timer = Robust.Shared.Timing.Timer;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Chat.Systems;
-using Content.Shared.Chat;
 
 namespace Content.Server.Shuttles.Systems;
 

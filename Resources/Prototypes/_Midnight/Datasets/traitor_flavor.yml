@@ -1,0 +1,14 @@
+- type: dataset
+  id: TraitorFlavor
+  values:
+  - "arc"
+  - "cybersun"
+  - "corporateclimber"
+  - "donkco"
+  - "gorlex"
+  - "mi13"
+  - "tiger"
+  - "ormg"
+  - "self"
+  - "waffleco"
+  - "interdyne"

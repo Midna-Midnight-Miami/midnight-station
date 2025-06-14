@@ -1,13 +1,4 @@
 - type: entity
-  parent: ClothingBackpack
-  id: ClothingBackpackCaptainFake
-  name: cuptain's backpack
-  description: It's a special backpack made with spraypaint and glue.
-  components:
-  - type: Sprite
-    sprite: Clothing/Back/Backpacks/captain.rsi
-
-- type: entity
   parent: ClothingHandsBase
   id: ClothingHandsGlovesCaptainFake
   name: cuptain gloves
@@ -37,14 +28,3 @@
       - 3
       - 3.5
       - 4
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitCaptainFake
-  name: cuptain's jumpsuit
-  description: It's a blue jumpsuit of cheap material with foil gold markings denoting the rank of "Cuptain".
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/captain.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/captain.rsi

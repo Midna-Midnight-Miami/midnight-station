@@ -1,0 +1,34 @@
+
+- type: entity
+  parent: [ClothingBeltBase, ClothingSlotBase]
+  id: ClothingBeltSheathFake
+  name: plastic sabre sheath
+  description: An plastic sheath designed to cosplay an officer.
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: Clothing/Belt/sheath.rsi
+  - type: Item
+    size: Ginormous
+  - type: ItemSlots
+    slots:
+      item:
+        name: Sabre
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        whitelist:
+          tags:
+          - CaptainSabre
+          - CaptainSabreFake
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - CaptainSabre
+          - CaptainSabreFake
+  - type: Appearance

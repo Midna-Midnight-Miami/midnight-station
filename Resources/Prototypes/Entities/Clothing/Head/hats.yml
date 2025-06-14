@@ -1271,28 +1271,6 @@
         Heat: 0.8
 
 - type: entity
-  parent: ClothingHeadBase
-  id: ClothingHeadHatCapcapFake
-  name: cuptain cap
-  description: A grand, stylish cuptain cap made of the finest arts and crafts materials.
-  components:
-  - type: Sprite
-    sprite: Clothing/Head/Hats/capcap.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Hats/capcap.rsi
-  - type: Item
-    sprite: Clothing/Head/Hats/capcap.rsi
-  - type: Tag
-    tags:
-    - ClothMade
-    - WhitelistChameleon
-    - HamsterWearable
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-inanimate
-    weight: 0.1
-  - type: BlockMovement
-
-- type: entity
   parent: [ ClothingHeadBase, BaseCentcommContraband ]
   id: ClothingHeadHatCentcomcap
   name: CentComm cap

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SPDX-FileCopyrightText: 2023 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2023 Just-a-Unity-Dev <just-a-unity-dev@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2023 Kara <lunarautomaton6@gmail.com>
@@ -13,6 +14,8 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+=======
+>>>>>>> 8ec8d364f0 (Rules update! Role overhaul! yippe!)
 - type: guideEntry
   id: Security
   name: guide-entry-security
@@ -21,8 +24,8 @@
   - Forensics
   - Defusal
   - CriminalRecords
-  - SpaceLaw # Goobstation
-
+  - SpaceLaw # Midnight
+  
 - type: guideEntry
   id: Forensics
   name: guide-entry-forensics

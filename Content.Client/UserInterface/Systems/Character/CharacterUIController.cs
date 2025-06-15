@@ -229,7 +229,7 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
         {
             roleText = Loc.GetString(proto.Name);
             color = proto.Color;
-            #Midnight
+            //Midnight
             // Check if player is non-antagonist and has MindShield component
             if (proto.Name == "role-type-non-antagonist-name" && 
                 _ent.HasComponent<MindShieldComponent>(_player.LocalEntity))
@@ -237,7 +237,7 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
                 roleText = Loc.GetString("role-type-crew-aligned-name");
                 color = Color.FromHex("#008000"); // Green color for crew-aligned
             }
-            #Midnight end
+            //Midnight end
         }
         else
         {

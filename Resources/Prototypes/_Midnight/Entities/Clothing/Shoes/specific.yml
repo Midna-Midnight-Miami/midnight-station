@@ -1,0 +1,25 @@
+- type: entity
+  parent: ClothingShoesBootsLaceup
+  id: ClothingShoesHoldout
+  suffix: Chameleon, Holdout
+  components:
+    - type: ItemSlots
+      slots:
+        holdout:
+          name: Stash
+          
+    - type: ItemSlotRestrictions
+      maxSize: Small # Its like a pocket
+      blacklistedTags: [Sidearm] # No wedges!
+      
+    - type: HiddenStorage
+      openDelay: 0.2
+      
+    - type: ChameleonClothing
+      slot: [FEET]
+      default: ClothingShoesColorBlack
+      
+    - type: UserInterface
+      interfaces:
+        enum.ChameleonUiKey.Key:
+          type: ChameleonBoundUserInterface

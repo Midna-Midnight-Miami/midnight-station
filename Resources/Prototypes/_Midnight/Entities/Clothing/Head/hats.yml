@@ -3,3 +3,47 @@
   id: ClothingHeadHatCapcapFake
   name: cup cap
   description: A grand, styleless cuptain cup.
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoldout
+  suffix: Chameleon, Holdout
+  name: Sharp Profile
+  description: MI13 holdout kit hat-knife. how are you seeing this description?
+  components:
+    - type: Sprite
+      sprite: Clothing/Head/Hats/greyfedora.rsi
+    - type: Clothing
+      sprite: Clothing/Head/Hats/greyfedora.rsi
+    - type: ThrowableBlocked # Goobstation
+    # Holdout storage.
+    - type: HideContrabandContent
+    - type: ItemSlots
+      slots:
+        holdout:
+          name: Stash 
+    - type: ItemSlotRestrictions
+      maxSize: Tiny
+    - type: HiddenStorage
+      openDelay: 0.2
+      # Secondary, bladed
+    - type: MeleeWeapon
+      hidden: true
+      wideAnimationRotation: 90
+      attackRate: 1.2
+      damage:
+        types:
+          Slash: 5
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Slash: 10
+    - type: LandAtCursor
+    - type: Sharp
+    - type: ChameleonClothing
+      slot: [HEAD]
+      default: ClothingHeadHatFedoraGrey
+    - type: UserInterface
+      interfaces:
+        enum.ChameleonUiKey.Key:
+          type: ChameleonBoundUserInterface

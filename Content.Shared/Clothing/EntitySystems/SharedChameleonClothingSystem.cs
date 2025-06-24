@@ -109,9 +109,21 @@ public abstract class SharedChameleonClothingSystem : EntitySystem
 
     private void OnVerb(Entity<ChameleonClothingComponent> ent, ref GetVerbsEvent<InteractionVerb> args)
     {
-        if (!args.CanAccess || !args.CanInteract || ent.Comp.User != args.User)
+        if (!args.CanAccess || !args.CanInteract)
             return;
-    
+
+        // Allow verb if:
+        // 1. Item is equipped and user is the wearer, OR
+        // 2. Item is not equipped and has NONE slot (non-equippable)
+        var isEquipped = ent.Comp.User != null;
+        var isNonEquippable = ent.Comp.Slot == SlotFlags.NONE;
+        
+        if (isEquipped && ent.Comp.User != args.User)
+            return;
+
+        if (!isEquipped && !isNonEquippable)
+            return;
+
         // Only show verb if hidden storage is open
         if (IsHiddenStorageClosed(ent.Owner))
             return;
@@ -129,28 +141,31 @@ public abstract class SharedChameleonClothingSystem : EntitySystem
 
     protected virtual void UpdateSprite(EntityUid uid, EntityPrototype proto) { }
 
-    /// <summary>
-    ///     Check if this entity prototype is valid target for chameleon item.
-    /// </summary>
-    public bool IsValidTarget(EntityPrototype proto, SlotFlags chameleonSlot = SlotFlags.NONE, string? requiredTag = null)
-    {
-        // check if entity is valid
-        if (proto.Abstract || proto.HideSpawnMenu)
+/// <summary>
+///     Check if this entity prototype is valid target for chameleon item.
+/// </summary>
+public bool IsValidTarget(EntityPrototype proto, SlotFlags chameleonSlot = SlotFlags.NONE, string? requiredTag = null)
+{
+    // check if entity is valid
+    if (proto.Abstract || proto.HideSpawnMenu)
+        return false;
+
+    // check if it is marked as valid chameleon target
+    if (!proto.TryGetComponent(out TagComponent? tag, _factory) || !_tag.HasTag(tag, WhitelistChameleonTag))
+        return false;
+
+    if (requiredTag != null && !_tag.HasTag(tag, requiredTag))
             return false;
 
-        // check if it is marked as valid chameleon target
-        if (!proto.TryGetComponent(out TagComponent? tag, _factory) || !_tag.HasTag(tag, WhitelistChameleonTag))
-            return false;
-
-        if (requiredTag != null && !_tag.HasTag(tag, requiredTag))
-            return false;
-
-        // check if it's valid clothing
-        if (!proto.TryGetComponent("Clothing", out ClothingComponent? clothing))
-            return false;
-        if (!clothing.Slots.HasFlag(chameleonSlot))
-            return false;
-
+    if (chameleonSlot == SlotFlags.NONE)
         return true;
-    }
+
+    // check if it's valid clothing
+    if (!proto.TryGetComponent("Clothing", out ClothingComponent? clothing))
+        return false;
+    if (!clothing.Slots.HasFlag(chameleonSlot))
+        return false;
+
+    return true;
+}
 }

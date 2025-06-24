@@ -2,23 +2,26 @@
   parent: ClothingShoesBootsLaceup
   id: ClothingShoesHoldout
   suffix: Chameleon, Holdout
+  name: Phantom step
+  description: MI13 holdout kit quiet shoes. how are you seeing this description?
   components:
+    # Holdout storage.
+    - type: HideContrabandContent
     - type: ItemSlots
       slots:
         holdout:
-          name: Stash
-          
+          name: Stash 
     - type: ItemSlotRestrictions
       maxSize: Small # Its like a pocket
       blacklistedTags: [Sidearm] # No wedges!
-      
     - type: HiddenStorage
       openDelay: 0.2
-      
+    # Secondary ability - Quiet Walk.
+    - type: MuteWalkingFootstep
+    # Chameleon.
     - type: ChameleonClothing
-      slot: [FEET]
-      default: ClothingShoesColorBlack
-      
+      slot: FEET
+      default: ClothingShoesBootsLaceup
     - type: UserInterface
       interfaces:
         enum.ChameleonUiKey.Key:

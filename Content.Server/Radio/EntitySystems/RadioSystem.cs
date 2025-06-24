@@ -1,42 +1,17 @@
-// SPDX-FileCopyrightText: 2020 Bright <nsmoak10@yahoo.com>
-// SPDX-FileCopyrightText: 2020 Bright0 <55061890+Bright0@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2020 Swept <jamesurquhartwebb@gmail.com>
-// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2021 Acruid <shatter66@gmail.com>
-// SPDX-FileCopyrightText: 2021 Metal Gear Sloth <metalgearsloth@gmail.com>
-// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2022 Kevin Zheng <kevinz5000@gmail.com>
-// SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
-// SPDX-FileCopyrightText: 2023 AJCM <AJCM@tutanota.com>
-// SPDX-FileCopyrightText: 2023 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Kara <lunarautomaton6@gmail.com>
-// SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Slava0135 <40753025+Slava0135@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Visne <39844191+Visne@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 adamsong <adamsong@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 LordCarve <27449516+LordCarve@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 SkaldetSkaeg <impotekh@gmail.com>
-// SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
-// SPDX-FileCopyrightText: 2024 beck-thompson <107373427+beck-thompson@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
+using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
+using Content.Server.Inventory;
+using Content.Shared.Inventory;
 using Content.Server.Power.Components;
 using Content.Server.Radio.Components;
 using Content.Shared.Chat;
 using Content.Shared.Database;
+using Content.Shared.Hands.Components;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
 using Content.Shared.Speech;
+using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -44,12 +19,11 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
+using Robust.Shared.Audio.Systems;
+using Robust.Shared.Audio;
 
 namespace Content.Server.Radio.EntitySystems;
 
-/// <summary>
-///     This system handles intrinsic radios and the general process of converting radio messages into chat messages.
-/// </summary>
 public sealed class RadioSystem : EntitySystem
 {
     [Dependency] private readonly INetManager _netMan = default!;
@@ -58,6 +32,8 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly ServerInventorySystem _inventorySystem = default!;
 
     // set used to prevent radio feedback loops.
     private readonly HashSet<string> _messages = new();
@@ -84,8 +60,13 @@ public sealed class RadioSystem : EntitySystem
 
     private void OnIntrinsicReceive(EntityUid uid, IntrinsicRadioReceiverComponent component, ref RadioReceiveEvent args)
     {
+        if (args.Handled)
+            return;
         if (TryComp(uid, out ActorComponent? actor))
+        {
             _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+            args.Handled = true;
+        }
     }
 
     /// <summary>
@@ -103,9 +84,19 @@ public sealed class RadioSystem : EntitySystem
     /// <param name="radioSource">Entity that picked up the message and will send it, e.g. headset</param>
     public void SendRadioMessage(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, bool escapeMarkup = true)
     {
+        // Midnight - Create a unique message identifier that includes both content and source
+        var messageId = $"{message}_{messageSource}_{radioSource}";
+        
         // TODO if radios ever garble / modify messages, feedback-prevention needs to be handled better than this.
-        if (!_messages.Add(message))
+        if (!_messages.Add(messageId))
             return;
+
+        // Midnight - Play hidden radio sound locally around the sender if applicable with reduced range
+        if (TryComp<HiddenRadioComponent>(radioSource, out var hiddenRadio) && 
+            IsSoleProvider(messageSource, channel.ID, radioSource))
+        {
+            _audio.PlayPvs(hiddenRadio.Sound, messageSource, audioParams: AudioParams.Default.WithMaxDistance(7.5f).WithRolloffFactor(2f));
+        }
 
         var evt = new TransformSpeakerNameEvent(messageSource, MetaData(messageSource).EntityName);
         RaiseLocalEvent(messageSource, evt);
@@ -151,6 +142,10 @@ public sealed class RadioSystem : EntitySystem
         var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
+        // Midnight - Track which entities have already received this message to prevent duplicates
+        // Group by the parent entity (the wearer) for headsets, or the entity itself for other radios
+        var processedEntities = new HashSet<EntityUid>();
+
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
         {
@@ -176,7 +171,25 @@ public sealed class RadioSystem : EntitySystem
             if (attemptEv.Cancelled)
                 continue;
 
-            // send the message
+            // Midnight - Determine the logical receiver entity
+            EntityUid logicalReceiver;
+            
+            // For headsets, the logical receiver is the wearer
+            if (TryComp<HeadsetComponent>(receiver, out var headset) && headset.IsEquipped)
+            {
+                logicalReceiver = Transform(receiver).ParentUid;
+            }
+            else
+            {
+                // For other radios (handheld, intrinsic, etc.), the logical receiver is the radio itself
+                logicalReceiver = receiver;
+            }
+
+            // Skip if we've already processed this logical receiver
+            if (!processedEntities.Add(logicalReceiver))
+                continue;
+
+            // send the message to the actual radio device
             RaiseLocalEvent(receiver, ref ev);
         }
 
@@ -186,7 +199,7 @@ public sealed class RadioSystem : EntitySystem
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Radio message from {ToPrettyString(messageSource):user} on {channel.LocalizedName}: {message}");
 
         _replay.RecordServerMessage(chat);
-        _messages.Remove(message);
+        _messages.Remove(messageId);
     }
 
     /// <inheritdoc cref="TelecomServerComponent"/>
@@ -203,5 +216,72 @@ public sealed class RadioSystem : EntitySystem
             }
         }
         return false;
+    }
+    
+    // Midnight - MI13 Radio Jacket
+    private bool IsSoleProvider(EntityUid user, string channelId, EntityUid radioSource)
+    {
+        // Get all headsets and radios the user has that can provide this channel
+        var providers = GetAllRadioProviders(user, channelId).ToList();
+
+        // Return true if:
+        // 1. There's exactly one provider
+        // 2. That provider is our hidden radio source
+        return providers.Count == 1 && providers[0] == radioSource;
+    }
+
+    private IEnumerable<EntityUid> GetAllRadioProviders(EntityUid user, string channelId)
+    {
+        // Check equipment slots for headsets and active radios
+        if (TryComp<InventoryComponent>(user, out var inventory))
+        {
+            foreach (var slot in inventory.Slots)
+            {
+                if (_inventorySystem.TryGetSlotEntity(user, slot.Name, out var item))
+                {
+                    // Check if it's a headset with the required slot and channel
+                    if (TryComp<HeadsetComponent>(item, out var headset) && 
+                        TryComp<EncryptionKeyHolderComponent>(item, out var headsetKeys) &&
+                        headset.Enabled && headset.IsEquipped &&
+                        headsetKeys.Channels.Contains(channelId))
+                    {
+                        yield return item.Value;
+                    }
+                    // Also check for active radios (handheld, etc.)
+                    else if (TryComp<ActiveRadioComponent>(item, out var active) &&
+                        TryComp<EncryptionKeyHolderComponent>(item, out var encryption) &&
+                        encryption.Channels.Contains(channelId))
+                    {
+                        yield return item.Value;
+                    }
+                }
+            }
+        }
+
+        // Check hands for handheld radios
+        if (TryComp<HandsComponent>(user, out var hands))
+        {
+            foreach (var hand in hands.Hands.Values)
+            {
+                if (hand.HeldEntity != null)
+                {
+                    var item = hand.HeldEntity.Value;
+                    if (TryComp<ActiveRadioComponent>(item, out var active) &&
+                        TryComp<EncryptionKeyHolderComponent>(item, out var encryption) &&
+                        encryption.Channels.Contains(channelId))
+                    {
+                        yield return item;
+                    }
+                }
+            }
+        }
+
+        // Check the user themselves (for implanted radios)
+        if (TryComp<ActiveRadioComponent>(user, out var userActive) &&
+            TryComp<EncryptionKeyHolderComponent>(user, out var userEncryption) &&
+            userEncryption.Channels.Contains(channelId))
+        {
+            yield return user;
+        }
     }
 }

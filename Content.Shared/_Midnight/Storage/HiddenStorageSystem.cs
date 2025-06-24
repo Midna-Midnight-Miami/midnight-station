@@ -5,7 +5,12 @@ using Content.Shared.Interaction;
 using Content.Shared.Tools;
 using Content.Shared.Containers.ItemSlots;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Audio;
+using Robust.Shared.Containers;
 using Content.Shared.DoAfter;
+using Content.Shared.Clothing.Components;
+using Content.Shared.Clothing.EntitySystems;
+using Content.Shared.Radio.Components;
 
 namespace Content.Shared._Midnight.Storage;
 
@@ -26,6 +31,7 @@ public sealed class HiddenStorageSystem : EntitySystem
 
     private void OnInit(EntityUid uid, HiddenStorageComponent component, ComponentInit args)
     {
+        SyncEncryptionState(uid, component.IsOpen);
         UpdateSlotState(uid, component);
     }
 
@@ -36,6 +42,7 @@ public sealed class HiddenStorageSystem : EntitySystem
 
         args.Handled = true;
 
+        // Start DoAfter
         var doAfterArgs = new DoAfterArgs(EntityManager, args.User, component.OpenDelay,
             new ToggleHiddenStorageDoAfterEvent(), uid, target: uid)
         {
@@ -45,7 +52,8 @@ public sealed class HiddenStorageSystem : EntitySystem
             NeedHand = true
         };
 
-        _doAfter.TryStartDoAfter(doAfterArgs);
+        if (!_doAfter.TryStartDoAfter(doAfterArgs))
+            return;
     }
 
     private void OnDoAfterComplete(EntityUid uid, HiddenStorageComponent component, ToggleHiddenStorageDoAfterEvent args)
@@ -55,27 +63,42 @@ public sealed class HiddenStorageSystem : EntitySystem
 
         // Toggle state
         component.IsOpen = !component.IsOpen;
+        SyncEncryptionState(uid, component.IsOpen);
         Dirty(uid, component);
 
-        // Play sound at END of DoAfter
-        _audio.PlayPredicted(component.IsOpen ? component.OpenSound : component.CloseSound, uid, args.User);
+        var soundToPlay = component.IsOpen ? component.OpenSound : component.CloseSound;
+        _audio.PlayPredicted(soundToPlay, uid, args.User, audioParams: AudioParams.Default.WithMaxDistance(7.5f).WithRolloffFactor(2f));
+        
         UpdateSlotState(uid, component);
+    }
+
+    private void SyncEncryptionState(EntityUid uid, bool unlocked)
+    {
+        if (TryComp<EncryptionKeyHolderComponent>(uid, out var keys))
+        {
+            keys.KeysUnlocked = unlocked;
+        }
     }
 
     private void UpdateSlotState(EntityUid uid, HiddenStorageComponent component)
     {
-        if (!TryComp<ItemSlotsComponent>(uid, out var itemSlots))
-            return;
-
-        foreach (var (id, _) in itemSlots.Slots)
+        if (TryComp<ItemSlotsComponent>(uid, out var itemSlots))
         {
-            // Lock slot when storage is closed, unlock when open
-            _itemSlots.SetLock(uid, id, !component.IsOpen, itemSlots);
+            _itemSlots.SetLock(uid, "holdout", !component.IsOpen, itemSlots);
         }
     }
 }
 
 [Serializable, NetSerializable]
-public sealed partial class ToggleHiddenStorageDoAfterEvent : SimpleDoAfterEvent
+public sealed partial class ToggleHiddenStorageDoAfterEvent : SimpleDoAfterEvent {}
+
+[Serializable, NetSerializable]
+public sealed class HiddenStorageComponentState : ComponentState
 {
+    public bool IsOpen { get; }
+
+    public HiddenStorageComponentState(bool isOpen)
+    {
+        IsOpen = isOpen;
+    }
 }

@@ -135,7 +135,7 @@ guide-entry-nuclear-operatives = Nuclear Operatives
 guide-entry-traitors = Traitors
 guide-entry-zombies = Zombies
 guide-entry-revolutionaries = Revolutionaries
-guide-entry-minor-antagonists = Minor Antagonists
+guide-entry-minor-antagonists = Misc Antagonists
 guide-entry-space-ninja = Space Ninja
 guide-entry-thieves = Thieves
 
@@ -195,8 +195,13 @@ guide-entry-rules-s9 = S9
 guide-entry-rules-s10 = S10
 guide-entry-rules-mrp-m0 = MRP Rules
 guide-entry-rules-m1 = M1
+#Midnight
 guide-entry-rules-space-law = Space Law
-guide-entry-rules-sl-crime-list = Crime List
+guide-entry-rules-culpability-and-criminality = Culpability And Criminality
+guide-entry-rules-rights-of-the-accused = Rights Of The Accused
+guide-entry-rules-citations-and-sentencing = Citations And Sentencing
+guide-entry-rules-authorization-and-licensing = Authorization And licensing
+#Midnight end
 guide-entry-rules-sl-controlled-substances = Controlled Substances
 guide-entry-rules-sl-restricted-gear = Restricted Gear
 guide-entry-rules-sl-restricted-weapons = Restricted Weapons

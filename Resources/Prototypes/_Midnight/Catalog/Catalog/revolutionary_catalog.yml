@@ -1,0 +1,178 @@
+# conversion
+- type: listing
+  id: RevolutionaryUplinkStarterFlash
+  name: starter flash
+  description: Standard-issue conversion tool. You are trained to use this.
+  productEntity: SciFlash
+  cost:
+    Telecrystal: 0
+  categories:
+   - RevolutionaryUplinkConversion
+  conditions:
+   - !type:ListingLimitedStockCondition
+     stock: 1
+     saleLimit: 1
+
+- type: listing
+  id: RevolutionaryUplinkStarterKey
+  name: starter encryption key
+  description: Encrypted comms for operational coordination. Standard issue.
+  productEntity: EncryptionKeySyndie
+  cost:
+    Telecrystal: 0
+  categories:
+   - RevolutionaryUplinkConversion
+  conditions:
+   - !type:ListingLimitedStockCondition
+     stock: 1
+     saleLimit: 1
+
+- type: listing
+  id: RevolutionaryUplinkFlash2Charge
+  name: flash - 2 charges
+  description: Standard flash bulb device. You are trained to use this.
+  productEntity: SciFlash
+  cost:
+    Telecrystal: 10
+  categories:
+   - RevolutionaryUplinkConversion
+  conditions:
+   - !type:ListingLimitedStockCondition
+     stock: 1
+     saleLimit: 1
+
+- type: listing
+  id: RevolutionaryUplinkFlash5Charge
+  name: flash - 5 charges
+  description: Buy 4 charges, get 1 free.
+  productEntity: Flash
+  cost:
+    Telecrystal: 20
+  categories:
+   - RevolutionaryUplinkConversion
+  conditions:
+   - !type:ListingLimitedStockCondition
+     stock: 1
+     saleLimit: 1
+
+- type: listing
+  id: RevolutionaryUplinkFlashRecharge
+  name: recharging flash
+  description: Instead of a standard flash bulb, uses a quartz tube with xenon gas. Recharging battery included.
+  productEntity: RechargeFlash
+  cost:
+    Telecrystal: 30
+  categories:
+   - RevolutionaryUplinkConversion
+  conditions:
+   - !type:ListingLimitedStockCondition
+     stock: 1
+     saleLimit: 1
+
+# utility
+
+- type: listing
+  id: RevolutionaryUplinkSunglasses
+  name: sunglasses
+  description: Flash protection to keep you cool as a cuke with tricks up your sleeve.
+  productEntity: ClothingEyesGlassesSunglasses
+  cost:
+    Telecrystal: 10
+  categories:
+   - RevolutionaryUplinkUtility
+
+- type: listing
+  id: RevolutionaryUplinkExperimentalShades
+  name: Experimental shades
+  description: Sunglasses with a MedSec Hud built in.
+  productEntity: ClothingEyesGlassesExperimentalShades
+  cost:
+    Telecrystal: 40
+  categories:
+   - RevolutionaryUplinkUtility
+
+- type: listing
+  id: RevolutionaryUplinkSyndieKey
+  name: Back up encryption key
+  description: Encrypted comms for operational coordination. In case you lost the first one.
+  productEntity: EncryptionKeySyndie
+  cost:
+    Telecrystal: 5
+  categories:
+   - RevolutionaryUplinkUtility
+
+- type: listing
+  id: RevolutionaryUplinkFastDrawImplanter
+  name: fast draw implanter
+  description: Remove implants and crush them for good measure. Gold-starred for quality assurance.
+  productEntity: RevsFastDrawImplanter
+  cost:
+    Telecrystal: 20
+  categories:
+   - RevolutionaryUplinkUtility
+
+# combat
+- type: listing
+  id: RevolutionaryUplinkMosinAmmo
+  name: .30 rifle magazine
+  description: A revolutionary caliber. Cheap as dirt.
+  productEntity: MagazineLightRifle
+  cost:
+    Telecrystal: 3
+  categories:
+   - RevolutionaryUplinkCombat
+
+- type: listing
+  id: RevolutionaryUplinkMosin
+  name: kardashev-mosin
+  description: Practically neolithic rifle pattern somehow still in production. Cheap as dirt. Feels overpriced.
+  productEntity: WeaponSniperMosin
+  cost:
+    Telecrystal: 10
+  categories:
+   - RevolutionaryUplinkCombat
+
+- type: listing
+  id: RevolutionaryUplinkBulkMosin
+  name: Bulk kardashev-mosin
+  description: Buy 5, get 5 free. Still feels overpriced, somehow.
+  productEntity: CrateSyndicateBulkMosin
+  cost:
+    Telecrystal: 50
+  categories:
+    - RevolutionaryUplinkCombat
+
+- type: listing
+  id: RevolutionaryUplinkAK
+  name: AKM
+  description: Your journey to victory has just begun, death to Nanotrasen.
+  productEntity: WeaponRifleAk
+  cost:
+    Telecrystal: 75
+  categories:
+   - RevolutionaryUplinkCombat
+  conditions:
+   - !type:ListingLimitedStockCondition
+     stock: 1
+     saleLimit: 1
+
+- type: listing
+  id: RevolutionaryUplinkIncendiaryGrenade
+  name: incendiary grenade
+  description: For when you can't get a cocktail.
+  productEntity: GrenadeIncendiary
+  cost:
+    Telecrystal: 25
+  categories:
+   - RevolutionaryUplinkCombat
+
+# misc
+- type: listing
+  id: RevolutionaryUplinkSyndicateJawsOfLife
+  name: jaws of life
+  description: Pry open locked doors. Keeps you from getting stuck, and doubles as a crowbar/wirecutter combo.
+  productEntity: SyndicateJawsOfLife
+  cost:
+    Telecrystal: 40
+  categories:
+   - RevolutionaryUplinkMisc

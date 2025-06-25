@@ -687,14 +687,3 @@
       state: banner-yellow
     - type: RandomHumanoidSpawner
       settings: Cossack
-
-
-- type: entity
-  id: RandomHumanoidVisitorCaptainFake
-  name: visiting Cuptain ghost role
-  components:
-    - type: Sprite
-      sprite: Markers/jobs.rsi
-      state: captain
-    - type: RandomHumanoidSpawner
-      settings: VisitorCaptainFake

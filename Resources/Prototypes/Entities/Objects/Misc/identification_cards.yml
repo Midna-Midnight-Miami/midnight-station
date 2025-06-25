@@ -1,5 +1,3 @@
-#
-
 - type: entity
   parent: Clothing
   id: IDCardStandard
@@ -125,18 +123,6 @@
     - HighRiskItem
   - type: StealTarget
     stealGroup: CaptainIDCard
-
-- type: entity
-  parent: IDCardStandard
-  id: CaptainIDCardFake
-  name: cuptain ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: default
-    - state: idcaptain
-  - type: PresetIdCard
-    job: Cuptain
 
 - type: entity
   parent: IDCardStandard
@@ -481,6 +467,8 @@
     layers:
     - state: default
     - state: idbrigmedic
+  - type: PresetIdCard # goob
+    job: Brigmedic
 
 - type: entity
   parent: IDCardStandard

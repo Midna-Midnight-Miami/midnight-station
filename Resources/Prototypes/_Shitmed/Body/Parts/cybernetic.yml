@@ -12,6 +12,10 @@
   - type: Damageable
     damageContainer: Silicon
   - type: Cybernetics
+  - type: Nerve
+    painMultiplier: 1.5
+  - type: Woundable
+    canBleed: false
 
 - type: entity
   abstract: true
@@ -26,6 +30,16 @@
     baseLayerId: MobCyberneticBishopLArm
   - type: GenerateChildPart
     id: LeftHandCybernetic
+  - type: WoundableVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    occupiedLayer: LArm
+    damageOverlayGroups:
+      Brute:
+        sprite: _Shitmed/Mobs/Effects/brute_damage.rsi
+        color: "#DD8822"
+      Burn:
+        sprite: _Shitmed/Mobs/Effects/burn_damage.rsi
+    bleedingOverlay: null
 
 - type: entity
   abstract: true
@@ -40,6 +54,16 @@
     baseLayerId: MobCyberneticBishopRArm
   - type: GenerateChildPart
     id: RightHandCybernetic
+  - type: WoundableVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    occupiedLayer: RArm
+    damageOverlayGroups:
+      Brute:
+        sprite: _Shitmed/Mobs/Effects/brute_damage.rsi
+        color: "#DD8822"
+      Burn:
+        sprite: _Shitmed/Mobs/Effects/burn_damage.rsi
+    bleedingOverlay: null
 
 - type: entity
   abstract: true
@@ -54,6 +78,16 @@
     baseLayerId: MobCyberneticBishopLLeg
   - type: GenerateChildPart
     id: LeftFootCybernetic
+  - type: WoundableVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    occupiedLayer: LLeg
+    damageOverlayGroups:
+      Brute:
+        sprite: _Shitmed/Mobs/Effects/brute_damage.rsi
+        color: "#DD8822"
+      Burn:
+        sprite: _Shitmed/Mobs/Effects/burn_damage.rsi
+    bleedingOverlay: null
 
 - type: entity
   abstract: true
@@ -68,6 +102,16 @@
     baseLayerId: MobCyberneticBishopRLeg
   - type: GenerateChildPart
     id: RightFootCybernetic
+  - type: WoundableVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    occupiedLayer: RLeg
+    damageOverlayGroups:
+      Brute:
+        sprite: _Shitmed/Mobs/Effects/brute_damage.rsi
+        color: "#DD8822"
+      Burn:
+        sprite: _Shitmed/Mobs/Effects/burn_damage.rsi
+    bleedingOverlay: null
 
 - type: entity
   parent: [ CyberneticPartBase, BaseLeftHand ]
@@ -75,6 +119,16 @@
   components:
   - type: BodyPart
     baseLayerId: MobCyberneticBishopLHand
+  - type: WoundableVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    occupiedLayer: LHand
+    damageOverlayGroups:
+      Brute:
+        sprite: _Shitmed/Mobs/Effects/brute_damage.rsi
+        color: "#DD8822"
+      Burn:
+        sprite: _Shitmed/Mobs/Effects/burn_damage.rsi
+    bleedingOverlay: null
 
 - type: entity
   parent: [ CyberneticPartBase, BaseRightHand ]
@@ -83,6 +137,16 @@
   components:
   - type: BodyPart
     baseLayerId: MobCyberneticBishopRHand
+  - type: WoundableVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    occupiedLayer: RHand
+    damageOverlayGroups:
+      Brute:
+        sprite: _Shitmed/Mobs/Effects/brute_damage.rsi
+        color: "#DD8822"
+      Burn:
+        sprite: _Shitmed/Mobs/Effects/burn_damage.rsi
+    bleedingOverlay: null
 
 - type: entity
   parent: [ CyberneticPartBase, BaseLeftFoot ]
@@ -91,6 +155,16 @@
   components:
   - type: BodyPart
     baseLayerId: MobCyberneticBishopLFoot
+  - type: WoundableVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    occupiedLayer: LFoot
+    damageOverlayGroups:
+      Brute:
+        sprite: _Shitmed/Mobs/Effects/brute_damage.rsi
+        color: "#DD8822"
+      Burn:
+        sprite: _Shitmed/Mobs/Effects/burn_damage.rsi
+    bleedingOverlay: null
 
 - type: entity
   parent: [ CyberneticPartBase, BaseRightFoot ]
@@ -99,6 +173,16 @@
   components:
   - type: BodyPart
     baseLayerId: MobCyberneticBishopRFoot
+  - type: WoundableVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    occupiedLayer: RFoot
+    damageOverlayGroups:
+      Brute:
+        sprite: _Shitmed/Mobs/Effects/brute_damage.rsi
+        color: "#DD8822"
+      Burn:
+        sprite: _Shitmed/Mobs/Effects/burn_damage.rsi
+    bleedingOverlay: null
 
 - type: entity
   parent: LeftArmCyberneticBase

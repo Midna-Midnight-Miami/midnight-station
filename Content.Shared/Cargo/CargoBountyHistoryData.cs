@@ -1,8 +1,3 @@
-// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 BarryNorfolk <barrynorfolkman@protonmail.com>
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Shared.Cargo.Prototypes;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -43,11 +38,11 @@ public readonly partial record struct CargoBountyHistoryData
     /// The prototype containing information about the bounty.
     /// </summary>
     [DataField(required: true)]
-    public ProtoId<CargoBountyPrototype> Bounty { get; init; } = string.Empty;
+    public CargoBountyData Bounty { get; init; }
 
     public CargoBountyHistoryData(CargoBountyData bounty, BountyResult result, TimeSpan timestamp, string? actorName)
     {
-        Bounty = bounty.Bounty;
+        Bounty = bounty;
         Result = result;
         Id = bounty.Id;
         ActorName = actorName;

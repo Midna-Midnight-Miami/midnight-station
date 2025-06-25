@@ -1,0 +1,34 @@
+- type: guideEntry
+  id: SpaceLaw
+  name: guide-entry-rules-space-law
+  priority: 1
+  text: "/ServerInfo/_Midnight/Guidebook/ServerRules/SpaceLaw.xml"
+  children:
+  - CulpabilityAndCriminality
+  - RightsOfTheAccused
+  - CitationsAndSentencing
+  - AuthorizationAndLicensing
+
+- type: guideEntry
+  id: CulpabilityAndCriminality
+  name: guide-entry-rules-culpability-and-criminality
+  priority: 5
+  text: "/ServerInfo/_Midnight/Guidebook/ServerRules/SpaceLaw/CulpabilityAndCriminality.xml"
+
+- type: guideEntry
+  id: RightsOfTheAccused
+  name: guide-entry-rules-rights-of-the-accused
+  priority: 5
+  text: "/ServerInfo/_Midnight/Guidebook/ServerRules/SpaceLaw/RightsOfTheAccused.xml"
+
+- type: guideEntry
+  id: CitationsAndSentencing
+  name: guide-entry-rules-citations-and-sentencing
+  priority: 5
+  text: "/ServerInfo/_Midnight/Guidebook/ServerRules/SpaceLaw/CitationsAndSentencing.xml"
+
+- type: guideEntry
+  id: AuthorizationAndLicensing
+  name: guide-entry-rules-authorization-and-licensing
+  priority: 5
+  text: "/ServerInfo/_Midnight/Guidebook/ServerRules/SpaceLaw/AuthorizationAndLicensing.xml"

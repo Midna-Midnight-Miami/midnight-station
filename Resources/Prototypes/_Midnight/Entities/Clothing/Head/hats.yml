@@ -1,0 +1,5 @@
+- type: entity
+  parent: ClothingHeadHatCapcap
+  id: ClothingHeadHatCapcapFake
+  name: cup cap
+  description: A grand, styleless cuptain cup.

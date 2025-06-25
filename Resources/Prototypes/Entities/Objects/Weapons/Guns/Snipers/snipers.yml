@@ -106,7 +106,7 @@
 
 - type: entity
   name: Kardashev-Mosin
-  parent: [BaseWeaponSniper, BaseGunWieldable, BaseSyndicateContraband]
+  parent: [BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband]
   id: WeaponSniperMosin
   description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
   components:
@@ -117,6 +117,21 @@
     storedRotation: 45
   - type: Gun
     fireRate: 1.2
+    #Midnight Edit
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    offset: -0.15,0.0
+  - type: LandAtCursor
+  - type: DamageOtherOnHit
+    ignoreResistances: true
+    damage:
+      types:
+        Slash: 10
+        Piercing: 10
+  - type: ThrowingAngle
+    angle: 225
+  - type: Sharp
+  #Midnight End
   - type: AltFireMelee
     attackType: Heavy
   - type: MeleeWeapon

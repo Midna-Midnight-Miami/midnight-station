@@ -1,5 +1,3 @@
-#
-
 - type: entity
   id: BaseMindRole
   name: Mind Role
@@ -7,6 +5,7 @@
   abstract: true
   components:
   - type: MindRole
+    roleType: NonAntagonist
 
 - type: entity
   parent: BaseMindRole
@@ -16,7 +15,7 @@
   - type: MindRole
     antag: true
     antagPrototype: GenericAntagonist
-    roleType: SoloAntagonist
+    roleType: ModerateAntagonist
     sortWeight: 50
 
 #Observer
@@ -27,6 +26,7 @@
   components:
   - type: ObserverRole
   - type: MindRole
+    roleType: MinorAntagonist
     sortWeight: -10
 
 #Ghost Roles
@@ -93,7 +93,7 @@
   name: Ghost Role (Team Antagonist)
   components:
   - type: MindRole
-    roleType: TeamAntagonist
+    roleType: ModerateAntagonist
     antagPrototype: GenericTeamAntagonist
 
 # This should be used (or inherited) for team antags that are summoned or converted in large quantities, and are "secondary" to other antags
@@ -142,7 +142,7 @@
   components:
   - type: MindRole
     antagPrototype: Dragon
-    roleType: TeamAntagonist
+    roleType: MajorAntagonist
     exclusiveAntag: true
   - type: DragonRole
   - type: RoleBriefing
@@ -156,6 +156,7 @@
   components:
   - type: MindRole
     antagPrototype: SpaceNinja
+    roleType: ModerateAntagonist
     exclusiveAntag: true
   - type: NinjaRole
 
@@ -167,7 +168,7 @@
   components:
   - type: MindRole
     antagPrototype: ParadoxClone
-    roleType: SoloAntagonist
+    roleType: ModerateAntagonist
   - type: ParadoxCloneRole
 
 # Nukies
@@ -177,7 +178,7 @@
   name: Nukeops Operative Role
   components:
   - type: MindRole
-    roleType: TeamAntagonist
+    roleType: MajorAntagonist
     exclusiveAntag: true
     antagPrototype: Nukeops
   - type: NukeopsRole
@@ -207,7 +208,7 @@
   - type: MindRole
     antagPrototype: HeadRev
     exclusiveAntag: true
-    roleType: TeamAntagonist
+    roleType: ModerateAntagonist
   - type: RevolutionaryRole
 
 - type: entity
@@ -225,6 +226,7 @@
   name: Thief Role
   components:
   - type: MindRole
+    roleType: MinorAntagonist
     antagPrototype: Thief
   - type: ThiefRole
 
@@ -235,6 +237,7 @@
   name: Traitor Role
   components:
   - type: MindRole
+    roleType: ModerateAntagonist
     antagPrototype: Traitor
     exclusiveAntag: true
   - type: TraitorRole
@@ -253,8 +256,7 @@
   name: Syndicate Reinforcement Role
   components:
   - type: MindRole
-    roleType: TeamAntagonist
-    antagPrototype: GenericTeamAntagonist
+    roleType: Familiar
 
 # Zombie Squad
 - type: entity
@@ -265,7 +267,7 @@
   - type: MindRole
     antagPrototype: InitialInfected
     exclusiveAntag: true
-    roleType: TeamAntagonist
+    roleType: MajorAntagonist
   - type: InitialInfectedRole
 
 - type: entity
@@ -276,7 +278,7 @@
   - type: MindRole
     antagPrototype: Zombie
     exclusiveAntag: true
-    roleType: TeamAntagonist
+    roleType: MajorAntagonist
   - type: ZombieRole
 
 # goob edit - antags
@@ -288,7 +290,7 @@
   - type: MindRole
     antagPrototype: Changeling
     exclusiveAntag: true
-    roleType: SoloAntagonist
+    roleType: ModerateAntagonist
   - type: ChangelingRole
 
 - type: entity
@@ -299,7 +301,7 @@
   - type: MindRole
     antagPrototype: Heretic
     exclusiveAntag: true
-    roleType: SoloAntagonist
+    roleType: ModerateAntagonist
   - type: HereticRole
 
 - type: entity

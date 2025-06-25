@@ -1,0 +1,8 @@
+- type: entity
+  id: CupMindShieldImplanter
+  suffix: fake mindshield
+  parent: BaseImplantOnlyImplanter
+  description: Helps Cuptains "Lock In" to fool sechuds and exert their "Authority".
+  components:
+  - type: Implanter
+    implant: FakeMindShieldImplant

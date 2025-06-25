@@ -1,0 +1,30 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCaptainFake
+  name: cuptain gloves
+  description: Regal blue gloves, with a foil gold trim. They look like repurposed budget insuls.
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/captain.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/captain.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-durathread
+    fiberColor: fibers-regal-blue
+  - type: FingerprintMask
+  - type: RandomInsulation
+    list:
+      - 0
+      - 0
+      - 0.5
+      - 0.5
+      - 0.5
+      - 1.5
+      - 1.5
+      - 2
+      - 2.5
+      - 2.5
+      - 3
+      - 3.5
+      - 4

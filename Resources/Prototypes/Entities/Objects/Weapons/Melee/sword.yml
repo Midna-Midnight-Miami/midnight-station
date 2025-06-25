@@ -54,40 +54,7 @@
     weight: 0.0002 # 5,000 times less likely than 1 regular animal
   - type: PirateAccent
     # not putting a BlockMovement component here cause that's funny.
-
-- type: entity
-  name: cuptain's plastic sword
-  parent: BaseSword
-  id: CaptainSabreFake
-  description: A plastic replication of a captain's sword. Careful, the edge may cut by accident.
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Melee/captain_sabre.rsi
-  - type: MeleeWeapon
-    animationRotation: -95 # WWDP
-    wideAnimationRotation: -135 # WWDP
-    heavyStaminaCost: 2.5 # goob edit
-    attackRate: 1.5
-    damage:
-      types:
-        Slash: 1 #cmon, it has to be at least BETTER than the rest. # Goob edit
-    soundHit:
-        path: /Audio/Weapons/bladeslice.ogg
-  - type: Reflect # change this and i will fucking GUT YOU. YOU HEAR ME AVIU??
-    reflectProb: .05
-    spread: 90
-  - type: Item
-    sprite: Objects/Weapons/Melee/captain_sabre.rsi
-  - type: Tag
-    tags:
-    - CaptainSabre
-  - type: DisarmMalus
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-inanimate
-    weight: 0.1 # 5,000 times less likely than 1 regular animal
-  - type: PirateAccent
-    # not putting a BlockMovement component here cause that's funny.
-
+    
 - type: entity
   name: katana
   parent: [ BaseSword, BaseMajorContraband ]

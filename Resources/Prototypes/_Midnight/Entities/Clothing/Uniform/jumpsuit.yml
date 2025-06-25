@@ -1,4 +1,14 @@
 #
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCaptainFake
+  name: cuptain's jumpsuit
+  description: It's a blue jumpsuit of cheap material with foil gold markings denoting the rank of "Cuptain".
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/captain.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/captain.rsi
 
 - type: entity
   parent: ClothingUniformBase

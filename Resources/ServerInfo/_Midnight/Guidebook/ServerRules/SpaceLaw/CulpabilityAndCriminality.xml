@@ -1,0 +1,410 @@
+<Document>
+  # Culpability and Criminality
+
+  <Box>
+    [color=#999999][italic]A simplified version of the criminal code of Nanotrasen and, by extension, the Terran Stellar Federation. It is expected to be enforced on Nanotrasen space stations by Security personnel, and to be known by heart by any personnel possessing a law license.[/italic][/color]
+  </Box>
+
+  ## Table of Contents
+  1. Culpability Scale
+
+  2. Evidence Standards
+
+  3. Crime Classifications
+
+  .  3.A - I Degree Crimes
+
+  .  3.B - II Degree Crimes
+
+  .  3.C - III Degree Crimes
+
+  .  3.D - IV Degree Crimes
+    
+  .  3.E - V Degree Crimes
+
+  ## 1. Culpability Scale
+
+  Nanotrasen recognizes varying degrees of criminal involvement, with sentencing proportional to the level of culpability:
+
+  [bold]Solicitor[/bold] 
+  - One who requests or encourages a criminal act without directly participating. Sentencing should be at most a tenth of the primary offender's sentence based on the degree of persuasion employed.
+
+  [bold]Patsy[/bold] 
+  - An unwitting or manipulated participant who assists in a crime without full knowledge or under false pretenses. Sentencing should be at most a quarter of the primary offender's sentence depending on how reasonable it would have been to suspect criminal intent.
+
+  [bold]Accessory[/bold] 
+  - Anyone who substantially assists in a crime through unconventional or criminal action with awareness of the criminal nature. Sentencing should be at most half of the primary offender's sentence in proportion to the assistance given.
+
+  [bold]Attempter[/bold] 
+  - One with demonstrable intent to commit a crime, paired with substantial preparatory actions that would likely have resulted in the crime if not interrupted. Sentencing should be at most three quarters of the completed crime's sentence. Evidence must exclude reasonable doubt.
+
+  [bold]Culprit[/bold] 
+  - An individual whom directly commits a criminal offense. This is to be treated as the baseline.
+
+  [bold]Conspirator[/bold] 
+  - One involved with coordinated planning and execution of crimes by multiple parties with clear division of responsibilities and criminal intent. All conspirators receive 1.5x of the standard punishment for crimes associated with the conspiracy. Requires conclusive evidence of collaboration.
+
+  ## 2. Evidence Standards
+
+  Evidence gathered through illegal security operations is null and void regardless of circumstances and must be disregarded from consideration. Admission can be conclusive if there is no evidence or testimony to the contrary.
+
+  For minor crimes (I-III Degree), conviction requires that the suspect be identified as the most probable perpetrator based on available evidence. Severe crimes (IV-V Degree) demand a higher standard, requiring conclusive proof that the accused personnel is, beyond all reasonable doubt, guilty.
+
+  Testimonial evidence from non-mindshielded personnel requires corroboration through physical evidence or additional witness statements. The testimony of mindshielded personnel and Silicons are presumed reliable unless demonstrated otherwise.
+
+  The Nanotrasen Representative's testimony holds infallibility in all proceedings unless explicitly retracted by the Representative themselves.
+
+## 3. Crime Classifications
+
+### Crime Linkage System:
+- Letter A - Authentication/Identity Crimes
+- Letter B - Breaking/Breach Crimes  
+- Letter D - Destructive Acts
+- Letter E - Escalation from Basic Violence
+- Letter F - Fraud/Deception
+- Letter G - Government/Authority Resistance
+- Letter H - Homicide/Death-Related
+
+### 3.A - I Degree Crimes
+
+For minor crimes, payment of citations is standard, with jail time reserved for those unable or unwilling to pay.
+
+### 3.A.1 .E - Brawling
+[bold]Description:[/bold] To engage in consensual unarmed combat with another individual.
+
+[bold]Maximal Punishment:[/bold] $2,000 Citation
+
+[bold]Notes:[/bold] Mutually consensual combat without weapons. Escalates to murder if a participant dies. Cannot be combined with assault or homicide charges.
+
+### 3.A.2 .F - Bribery
+[bold]Description:[/bold] To offer/accept unlawful compensation for favors or leniency.
+
+[bold]Maximal Punishment:[/bold] $3,000 Citation + confiscation of compensation
+
+### 3.A.3 - Disturbance
+[bold]Description:[/bold] To cause a public disturbance.
+
+[bold]Maximal Punishment:[/bold] $2,000 Citation
+
+[bold]Notes:[/bold] General classification for disruptive behavior affecting station operations including public indecency, verbal harassment, obstruction of authorities, and incitement.
+
+### 3.A.4 - Failure to Identify
+[bold]Description:[/bold] To obscure one's identity by failing to wear a station-issued ID whilst wearing face coverings, failing to wear any identifying articles of clothing for their listed job, or failing to wear an ID during non-green alert levels.
+
+[bold]Maximal Punishment:[/bold] $250 Citation
+
+[bold]Notes:[/bold] May escalate to Failure to Comply (3.B.5) if refused correction. Punishment may be waived if there is a well-articulated reason for the failure.
+
+### 3.A.5 .A - Forgery
+[bold]Description:[/bold] Altering, falsifying, or counterfeiting stamped or signed documents.
+
+[bold]Maximal Punishment:[/bold] $3,000 Citation
+
+[bold]Notes:[/bold] May indicate conspiracy or intent for more significant crimes.
+
+### 3.A.6 - Illicit Substances
+[bold]Description:[/bold] To make, possess, or abuse unsanctioned substances that will significantly worsen work productivity without a prescription.
+
+[bold]Maximal Punishment:[/bold] $1,000 Citation + confiscation
+
+[bold]Notes:[/bold] This is to stop personnel from getting "high" on certain substances, such as mindbreaker toxin. Subject to Standard Operating Procedure guidelines and command staff discretion.
+
+### 3.A.7 - Machine Tampering
+[bold]Description:[/bold] Manipulating machine wiring to cause unintended behaviors.
+
+[bold]Maximal Punishment:[/bold] $2,000 Citation
+
+[bold]Notes:[/bold] Applies to unauthorized modifications producing irregular operation or restricted outputs. Contraband dispensed via tampering should be secured in the armory.
+
+### 3.A.8 .F - Mail Tampering
+[bold]Description:[/bold] To damage, open, or otherwise tamper with mail not addressed to oneself.
+
+[bold]Maximal Punishment:[/bold] $2,000 Citation
+
+[bold]Notes:[/bold] Includes ripping open packages, damaging parcels, or reading correspondence without authorization. Excludes authorized cargo inspection protocols.
+
+### 3.A.9 - Minor Contraband
+[bold]Description:[/bold] To possess or use minor contraband unlicensed.
+
+[bold]Maximal Punishment:[/bold] $3,000 Citation + confiscation
+
+[bold]Notes:[/bold] Department-specific equipment is classified as minor contraband when possessed by unauthorized personnel. EVA suits are considered minor contraband unless there is acceptable reason for its possession and it furthers the interests of Nanotrasen, at the discretion of security or command personnel.
+
+### 3.A.10 - Petty Theft
+[bold]Description:[/bold] To take non-vital or inexpensive property of another individual, organization, or common property, without consent.
+
+[bold]Maximal Punishment:[/bold] $3,000 Citation
+
+[bold]Notes:[/bold] Applies to non-critical items such as personal effects, basic tools, and low-value equipment. Often resolved through item return and warning.
+
+### 3.A.11 - Practicing Without License
+[bold]Description:[/bold] To perform specialized actions without a license.
+
+[bold]Maximal Punishment:[/bold] $2,000 Citation, Warning recommended.
+
+[bold]Notes:[/bold] May be compounded with charges resulting from incompetent execution of licensed activities.
+
+### 3.A.12 - Stowaway
+[bold]Description:[/bold] To board or remain aboard a vessel or station without proper authorization or documentation.
+
+[bold]Maximal Punishment:[/bold] $500 Citation
+
+[bold]Notes:[/bold] Minor administrative violation unless accompanied by additional offenses.
+
+### 3.A.13 - Trespass
+[bold]Description:[/bold] To enter a non-secured area without permission.
+
+[bold]Maximal Punishment:[/bold] $2,000 Citation
+
+[bold]Notes:[/bold] Removal from the area often suffices without formal detention.
+
+### 3.A.14 - Vandalism
+[bold]Description:[/bold] To intentionally deface or superficially damage public or private property.
+
+[bold]Maximal Punishment:[/bold] $2,000 Citation
+
+[bold]Notes:[/bold] Limited to cosmetic or minor functional damage. More severe damage falls under Destruction of Property.
+
+### 3.B - II Degree Crimes
+
+### 3.B.1 - Animal Cruelty
+[bold]Description:[/bold] To inflict unnecessary suffering or harm on a non-sapient being with malicious intent.
+
+[bold]Maximal Punishment:[/bold] $5,000 Citation
+
+[bold]Notes:[/bold] Excludes authorized research protocols and control of vermin or threatening organisms.
+
+### 3.B.2 .E - Assault
+[bold]Description:[/bold] To threaten to or to use physical force against someone without a deadly weapon and without the intent to kill.
+
+[bold]Maximal Punishment:[/bold] $4,000 Citation
+
+[bold]Notes:[/bold] Limited to unarmed or non-lethal confrontations without demonstrated lethal intent.
+
+### 3.B.3 .D - Damage/Destruction of Property
+[bold]Description:[/bold] To maliciously damage or deface public or private property or equipment.
+
+[bold]Maximal Punishment:[/bold] $4,000 Citation
+
+[bold]Notes:[/bold] Applies to functional damage exceeding cosmetic harm but below critical system compromise.
+
+### 3.B.4 - Endangerment
+[bold]Description:[/bold] To recklessly put yourself or others in danger, either through direct action, or failure to act.
+
+[bold]Maximal Punishment:[/bold] $4,000 Citation
+
+[bold]Notes:[/bold] Encompasses professional negligence, unsafe experimental protocols, and disregard for safety procedures.
+
+### 3.B.5 .G - Failure to Comply
+[bold]Description:[/bold] To resist reasonable orders given by an authority. This extends to warrants and authorized searches.
+
+[bold]Maximal Punishment:[/bold] $2,000 Citation
+
+[bold]Notes:[/bold] Requires documented warning and opportunity for compliance before enforcement.
+
+### 3.B.6 - Major Contraband
+[bold]Description:[/bold] To possess or use major contraband unlicensed.
+
+[bold]Maximal Punishment:[/bold] $5,000 Citation + confiscation
+
+[bold]Notes:[/bold] Security and command equipment are classified as major contraband when possessed without authorization.
+
+### 3.B.7 - Rioting
+[bold]Description:[/bold] To take part in a loosely organized group of personnel creating an unlawful public disturbance.
+
+[bold]Maximal Punishment:[/bold] $4,000 Citation
+
+[bold]Notes:[/bold] Riot organizers may be charged with all offenses committed under their leadership.
+
+### 3.B.8 - Wasteful Borg Decommissioning
+[bold]Description:[/bold] To needlessly decommission or destroy a borg chassis with laws that are not an active danger to the crew or clearly, maliciously tampered with.
+
+[bold]Maximal Punishment:[/bold] $5,000 Citation + potential restitution costs
+
+[bold]Notes:[/bold] Constitutes misappropriation of valuable company resources. Malfunctioning neural units should have brain removal with chassis preservation for recommissioning.
+
+### 3.C - III Degree Crimes
+
+### 3.C.1 .E - Assault with a Deadly Weapon
+[bold]Description:[/bold] To threaten to or to use physical force against someone with a deadly weapon without the intent to kill.
+
+[bold]Maximal Punishment:[/bold] $6,000 Citation
+
+[bold]Notes:[/bold] Requires weapon capable of causing serious injury or death with no proven lethal intent.
+
+### 3.C.2 .B - Breach of Arrest
+[bold]Description:[/bold] To intentionally resist and flee arrest or detainment by an authorized staff.
+
+[bold]Maximal Punishment:[/bold] $4,000 Citation
+
+[bold]Notes:[/bold] Applies during active physical arrest procedures, including assisting others in evading arrest.
+
+### 3.C.3 .B - Breach of Custody
+[bold]Description:[/bold] To break out of a cell or custody with the intention of escaping.
+
+[bold]Maximal Punishment:[/bold] $5,000 Citation
+
+[bold]Notes:[/bold] Added to existing penalties. Repeated offenses may warrant permanent confinement.
+
+### 3.C.4 .E - Dueling
+[bold]Description:[/bold] To engage in consensual armed combat with another individual.
+
+[bold]Maximal Punishment:[/bold] $8,000 Citation
+
+[bold]Notes:[/bold] Requires mutual consent with weapons. Separate from assault or murder charges but may include Prevention of Revival if applicable.
+
+### 3.C.5 - Grand Theft
+[bold]Description:[/bold] To take critical or unreplaceable property of another individual or organization without consent.
+
+[bold]Maximal Punishment:[/bold] $6,000 Citation
+
+[bold]Notes:[/bold] Applies to essential operational equipment, command items, and irreplaceable components.
+
+### 3.C.6 - Highly Illegal Contraband
+[bold]Description:[/bold] To possess or use highly illegal contraband unlicensed.
+
+[bold]Maximal Punishment:[/bold] $6,000 Citation + confiscation
+
+### 3.C.7 .F - Mail Fraud
+[bold]Description:[/bold] To use another person's identification to access or intercept their mail or packages.
+
+[bold]Maximal Punishment:[/bold] $5,000 Citation
+
+[bold]Notes:[/bold] Includes using stolen/forged IDs to retrieve mail from the Cargo department or mail terminals. May be compounded with identity theft charges.
+
+### 3.C.8 .H - Manslaughter
+[bold]Description:[/bold] To incidentally kill a sapient being without intent.
+
+[bold]Maximal Punishment:[/bold] $9,000 Citation
+
+[bold]Notes:[/bold] Covers both defensive and negligent unintentional homicide.
+
+### 3.C.9 .D - Mass Destruction
+[bold]Description:[/bold] To cause massive damage to an area or major station system.
+
+[bold]Maximal Punishment:[/bold] $15,000 Citation
+
+[bold]Notes:[/bold] Reserved for critical infrastructure sabotage affecting power, life support, medical systems, or substantial hull sections.
+
+### 3.C.10 - Medical Malpractice
+[bold]Description:[/bold] Reckless disregard for the proper practice of medicine.
+
+[bold]Maximal Punishment:[/bold] $8,000 Citation + License Revocation.
+
+[bold]Notes:[/bold] Exclusive to licensed practitioners. Includes non-consensual procedures and unauthorized experimental treatments. Supersedes homicide charges if resulting from medical negligence.
+
+### 3.C.11 .B - Secure Trespass
+[bold]Description:[/bold] To enter a secured area without permission.
+
+[bold]Maximal Punishment:[/bold] $8,000 Citation
+
+[bold]Notes:[/bold] Applies to high-security zones including command, telecommunications, security facilities, and restricted storage.
+
+### 3.D - IV Degree Crimes
+
+[color=#ff6666][bold]Jail time is mandatory for these offenses and cannot be entirely substituted with payment.[/bold][/color]
+
+### 3.D.1 - Biotic Weaponization
+[bold]Description:[/bold] To deliberately create, release, or weaponize dangerous biological entities.
+
+[bold]Maximal Punishment:[/bold] 11:00 Sentence
+
+[bold]Notes:[/bold] Covers the deliberate creation, release, or provocation of lifeforms in order to assail station personnel. Severe instances may instead be charged as Terrorism (3.E.6).
+
+### 3.D.2 .A - Identity Theft
+[bold]Description:[/bold] To assume the identity of another individual for fraudulent purposes.
+
+[bold]Maximal Punishment:[/bold] 9:00 Sentence
+
+[bold]Notes:[/bold] This is for impersonating station personnel, simple faux identities are Forgery (3.A.4) as they do not potentially hinder human resources via framing non-criminal personnel.
+
+### 3.D.3 - Kidnapping
+[bold]Description:[/bold] To unlawfully restrain, transport, control or confine a sapient being against that individual's will.
+
+[bold]Maximal Punishment:[/bold] 10:00 Sentence
+
+[bold]Notes:[/bold] Comprehensive classification for all forms of unlawful detention and control of sentient entities.
+
+### 3.D.4 .E .H - Murder
+[bold]Description:[/bold] To kill a sapient being with malicious intent.
+
+[bold]Maximal Punishment:[/bold] 12:00 Sentence
+
+[bold]Notes:[/bold] Applies when a victim enters a deceased state requiring revival procedures.
+
+### 3.D.5 .G - Sedition
+[bold]Description:[/bold] To incite or participate in organized opposition to the lawful authority of station command.
+
+[bold]Maximal Punishment:[/bold] 10:00 Sentence
+
+[bold]Notes:[/bold] This charge is to be levied against those who oppose the lawful decisions of command through organized means, not command in general (3.E.8).
+
+### 3.D.6 - Silicon Law Tampering
+[bold]Description:[/bold] To alter the laws or operating parameters of an AI system without proper authorization.
+
+[bold]Maximal Punishment:[/bold] 9:00 Sentence
+
+[bold]Notes:[/bold] This covers tampering with AI and Borg lawsets through lawboards or otherwise.
+
+### 3.E - V Degree Crimes
+
+### 3.E.1 - Capital Negligence
+[bold]Description:[/bold] To recklessly put yourself or others in danger, either through direct action, or failure to act as a command member.
+
+[bold]Maximal Punishment:[/bold] Permanent Confinement + Demotion
+
+[bold]Notes:[/bold] Command-specific offense for severe dereliction resulting in casualties or critical station compromise.
+
+### 3.E.2 .A - CentComm Impersonation
+[bold]Description:[/bold] Actively attempting to pass oneself off as a CentComm official without being a CentComm official.
+
+[bold]Maximal Punishment:[/bold] [color=red]Designation as an Enemy of the Company (RotA, 3) + Lobotomization.[/color]
+
+[bold]Notes:[/bold] This includes the Nanotrasen Representative, Blue Shield Officer, and Internal Affairs Agents, alongside Central Commanders, Inspectors, and other such personnel unexpected on the station during typical operation.
+
+### 3.E.3 .E .H - Mass Murder
+[bold]Description:[/bold] To kill three or more sapient beings with malicious intent.
+
+[bold]Maximal Punishment:[/bold] [color=red]Permanent Confinement[/color]
+
+[bold]Notes:[/bold] Requires multiple intentional homicides in a related series of actions.
+
+### 3.E.4 .H - Prevention of Revival
+[bold]Description:[/bold] To render a body unresurrectable.
+
+[bold]Maximal Punishment:[/bold] [color=red]Permanent Confinement[/color]
+
+[bold]Notes:[/bold] Includes deliberate corpse destruction, disposal, or concealment preventing standard revival protocols.
+
+### 3.E.5 - Ruinous Mental State
+[bold]Description:[/bold] To be so far gone that a mindshield either fails to implement or does nothing when implanted assuming legal implantation procedure.
+
+[bold]Maximal Punishment:[/bold] [color=red]Designation as an Enemy of the Company (RotA, 3).[/color]
+
+[bold]Notes:[/bold] In the case that implantation is not merely ineffective but fails completely, this constitutes an extreme security risk requiring immediate neutralization for the preservation of company interests.
+
+### 3.E.6 .D - Terrorism
+[bold]Description:[/bold] To engage in maliciously destructive actions which threaten to destroy, or successfully destroy a vessel or habitat.
+
+[bold]Maximal Punishment:[/bold] [color=red]Designation as an Enemy of the Company (RotA, 3).[/color]
+
+[bold]Notes:[/bold] Covers catastrophic sabotage and activation of self-destruct systems.
+
+### 3.E.7 - Union Activity
+[bold]Description:[/bold] To participate in the creation of a union, distribution of union materials, labor strikes, etc.
+
+[bold]Maximal Punishment:[/bold] [color=red]Mindshielding + total asset seizure.[/color]
+
+[bold]Notes:[/bold] Unions are prohibited under Nanotrasen founding contract provisions authorizing intervention against organized labor. Should a station fail to prevent unionization more extreme measures are to be expected from Central Command.
+
+### 3.E.8 .G - Usurpation of Command
+[bold]Description:[/bold] Actively attempting to disrupt, desert, displace, or otherwise disable NT approved command staff through illicit means.
+
+[bold]Maximal Punishment:[/bold] [color=red]Designation as an Enemy of the Company (RotA, 3).[/color]
+
+[bold]Notes:[/bold] Distinguished from minor insubordination by systematic attempts to compromise command structure integrity.
+
+  <Box>
+    [color=#666666][italic]This section of Space Law has been reviewed for compliance with all relevant documents by S. Eclair, CentComm Legal Specialist.[/italic][/color]
+  </Box>
+</Document>

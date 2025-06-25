@@ -55,8 +55,8 @@
       - StypticStimulatorImplant
       deimplantFailureDamage:
         types:
-          Caustic: 5 # Goobstation - unnerf implanters (why was it 50 genetic??)
-          Heat: 5
+          Cellular: 50
+          Heat: 40
     - type: Sprite
       sprite: Objects/Specific/Medical/implanter.rsi
       state: implanter0

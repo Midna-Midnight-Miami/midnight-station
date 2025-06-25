@@ -1,0 +1,9 @@
+- type: entity
+  id: ClothingBeltSheathFakeFilled
+  parent: ClothingBeltSheathFake
+  suffix: Filled, Cuptain # Goobstation
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - CaptainSabreFake

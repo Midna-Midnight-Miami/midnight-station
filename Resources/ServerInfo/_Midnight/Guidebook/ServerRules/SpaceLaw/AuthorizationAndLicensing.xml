@@ -1,0 +1,246 @@
+<Document>
+  # Authorization and Licensing
+  
+  <Box>
+    [color=#999999][italic] The statutes and regulations set forth in this document come from Nanotrasen on behalf of the Terran Stellar Federation and its people for the effective organization of station labor forces. [/color][/italic]
+  </Box>
+
+  ## Table of Contents
+
+  1. Department Licenses
+
+  2. Other Licenses
+
+  3. Permits
+
+  4. Nova Logistics Agreement
+
+  ## 1. Department Licenses
+  Authorization to perform specialized duties is automatically conferred to personnel in their assigned roles.
+
+  Lawyer badges are sufficient identification for a legal license, even if proper documentation is not produced, unless it can be proven to be stolen.
+
+  In emergency situations, these licenses may be explicitly issued to others by the following authorized personnel, or the captain.
+
+  <Table Columns="2">
+    <ColorBox>
+      <Box>
+        Department
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Authorized Issuer
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Cargo
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Issued by QM.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Engineering
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Issued by CE.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Legal
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Issued by HoP or NT Rep.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Medical
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Issued by CMO.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Science
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Issued by RD.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Security
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Issued by HoS.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Service
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Issued by HoP.
+      </Box>
+    </ColorBox>
+  </Table>
+
+  ## 2. Other Licenses
+  Authorization for restricted activities beyond standard departmental functions, or subsections of departmental licenses expected to be licenced without the rest of the privileges associated:
+
+  <Table Columns="2">
+    <ColorBox>
+      <Box>
+        License Type
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Authorized Issuer
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Firearm Possession
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        HoS, Warden, or Captain
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        License Administration
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Captain or CentComm, License must specify what departments it covers
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Liquor Distribution
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        HoP, or anyone with a legal license
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Magic Performance and Possession
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Central Command
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Non-Radio Broadcasting
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        HoP, or anyone with a legal license
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Pharmaceutical Activity
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        CMO or Captain
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Shuttle Operation
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        QM, Captain, or anyone with a legal license
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Minor Contraband Possession
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        HoP, HoS, or Captain
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Major Contraband Possession
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Captain
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Highly Illegal Contraband Possession
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+        Central Command
+      </Box>
+    </ColorBox>
+  </Table>
+-
+
+  Station mimes are considered to have a limited magical license extending to their innate Mime powers as long as they maintain their vow of silence and active membership within La Pantomime Cosmique.
+
+  Station chaplains are considered to have a magical license as per the Centauri Accord with The Organization for Religious Exemptions.
+
+  ## 3. Permits
+  Authorization for specific tasks or time-limited privileges can be issued as permits, which function as temporary licenses with defined expiration conditions. Permits may be issued by any personnel authorized to administer the corresponding full license, and must clearly state:
+
+  - The specific task or project authorized
+  - Expiration conditions or timeframe
+  - Any restrictions on how the task may be handled
+
+  Operating outside the specified parameters of a permit constitutes Practicing Without License (CC, 4.A.10) and potential additional charges depending on the nature of the violation.
+
+  ## 4. Nova Logistics Agreement
+  The Quartermaster maintains special regulatory exemption within Cargo and Salvage bays under the Nova Logistics Agreement. This provision permits authorization of all normally restricted items within these designated areas to facilitate efficient operations and accommodate specialty cargo.
+
+  Requisitioning of excessive armaments without proper justification constitutes Capital Negligence (CC, 4.E.1) and falls outside this exemption. The Quartermaster remains accountable for ensuring all authorized contraband serves legitimate operational purposes as determined by Nanotrasen's financial interests.
+
+  <Box>
+    [color=#666666][italic]This section of Space Law has been reviewed for compliance with all relevant documents by S. Eclair, CentComm Legal Specialist.[/italic][/color]
+  </Box>
+  </Document>

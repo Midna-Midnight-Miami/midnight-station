@@ -1,5 +1,3 @@
-#
-
 - type: entity
   parent: BaseMindRoleAntag
   id: DevilMindRole
@@ -8,5 +6,5 @@
   - type: MindRole
     antagPrototype: Devil
     exclusiveAntag: true
-    roleType: SoloAntagonist
+    roleType: MinorAntagonist
   - type: DevilRole

@@ -1,5 +1,3 @@
-#
-
 - type: entity
   parent: BaseMindRoleAntag
   id: MindRoleLoneAbductor
@@ -8,7 +6,7 @@
   - type: MindRole
     exclusiveAntag: true
     antagPrototype: LoneAbductorAntag
-    roleType: SoloAntagonist
+    roleType: MinorAntagonist
   - type: Abductor
 
 - type: entity
@@ -19,7 +17,7 @@
   - type: MindRole
     exclusiveAntag: true
     antagPrototype: AbductorAgentAntag
-    roleType: TeamAntagonist
+    roleType: MinorAntagonist
   - type: Abductor
 
 - type: entity
@@ -30,7 +28,7 @@
   - type: MindRole
     exclusiveAntag: true
     antagPrototype: AbductorScientistAntag
-    roleType: TeamAntagonist
+    roleType: MinorAntagonist
   - type: Abductor
 
 - type: entity
@@ -39,5 +37,6 @@
   name: Abductee Role
   components:
   - type: MindRole
+    roleType: FreeAgent
     antagPrototype: AbductorVictimAntag
   - type: AbductorVictim

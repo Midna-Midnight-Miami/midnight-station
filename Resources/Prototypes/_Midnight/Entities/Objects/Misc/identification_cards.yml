@@ -1,0 +1,11 @@
+- type: entity
+  parent: IDCardStandard
+  id: CaptainIDCardFake
+  name: cuptain ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcaptain
+  - type: PresetIdCard
+    job: Cuptain

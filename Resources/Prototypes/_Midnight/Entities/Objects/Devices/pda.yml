@@ -1,0 +1,17 @@
+- type: entity
+  parent: BasePDA
+  id: CaptainPDAFake
+  name: cuptain PDA
+  description: Surprisingly, very accurate to the Captain's.
+  components:
+  - type: Pda
+    id: CaptainIDCardFake
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-captain
+  - type: PdaBorderColor
+    borderColor: "#7C5D00"
+  - type: Icon
+    state: pda-captain

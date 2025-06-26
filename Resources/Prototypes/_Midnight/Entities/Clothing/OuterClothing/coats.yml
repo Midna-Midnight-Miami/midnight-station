@@ -44,7 +44,7 @@
   name: Chatter Coat
   description: Smuggler kit radio coat.
   components:
-    - type: Sprite
+  - type: Sprite
       sprite: Clothing/OuterClothing/Coats/space_asshole.rsi
     - type: Clothing
       sprite: Clothing/OuterClothing/Coats/space_asshole.rsi

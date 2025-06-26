@@ -3,6 +3,15 @@ using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.EntitySystems;
 using Content.Shared.IdentityManagement.Components;
 using Robust.Shared.Prototypes;
+using Content.Server.Speech.Components;
+using Content.Shared.Armor;
+using Content.Shared._Shitmed.Body.Part;
+using Content.Shared.Clothing;
+using Robust.Shared.GameObjects;
+using Robust.Shared.Containers;
+using Content.Shared.Actions; 
+using Robust.Shared.Serialization.Manager;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Clothing.Systems;
 
@@ -39,7 +48,7 @@ public sealed class ChameleonClothingSystem : SharedChameleonClothingSystem
     }
 
     /// <summary>
-    /// Change chameleon items name, description and sprite to mimic other entity prototype.
+    /// Changes the chameleon item's name, description, and sprite to mimic another entity prototype.
     /// </summary>
     public void SetSelectedPrototype(EntityUid uid, string? protoId, bool forceUpdate = false,
         ChameleonClothingComponent? component = null)
@@ -47,16 +56,59 @@ public sealed class ChameleonClothingSystem : SharedChameleonClothingSystem
         if (!Resolve(uid, ref component, false))
             return;
 
-        // Check that wasn't already selected (forceUpdate on component init ignores this check)
         if (component.Default == protoId && !forceUpdate)
             return;
 
-        // Make sure that it is valid change
         if (string.IsNullOrEmpty(protoId) || !_proto.TryIndex(protoId, out EntityPrototype? proto))
             return;
 
         if (!IsValidTarget(proto, component.Slot, component.RequireTag))
             return;
+
+        // Reset armor perception properties
+        component.PerceivedArmorCoverage = null;
+        component.PerceivedArmorModifiers = null;
+        component.PerceivedArmourCoverageHidden = true;
+        component.PerceivedArmourModifiersHidden = true;
+        component.PerceivedShowArmorOnExamine = false;
+
+        // Remove existing accent component and handle unequip if necessary
+        if (TryComp<AddAccentClothingComponent>(uid, out var oldAccent) && 
+            oldAccent.IsActive && 
+            component.User != null)
+        {
+            if (TryComp<ClothingComponent>(uid, out var clothing))
+            {
+                var unequipEvent = new ClothingGotUnequippedEvent(component.User.Value, clothing);
+                RaiseLocalEvent(uid, ref unequipEvent);
+            }
+        }
+        RemComp<AddAccentClothingComponent>(uid);
+
+        // Copy armor properties from the target prototype
+        if (proto.TryGetComponent<ArmorComponent>(out var armorComp))
+        {
+            component.PerceivedArmorCoverage = armorComp.ArmorCoverage;
+            component.PerceivedArmorModifiers = armorComp.Modifiers;
+            component.PerceivedArmourCoverageHidden = armorComp.ArmourCoverageHidden;
+            component.PerceivedArmourModifiersHidden = armorComp.ArmourModifiersHidden;
+            component.PerceivedShowArmorOnExamine = armorComp.ShowArmorOnExamine;
+        }
+
+        // Copy accent component from the target prototype
+        if (proto.TryGetComponent<AddAccentClothingComponent>(out var accentComp))
+        {
+            var newAccent = AddComp<AddAccentClothingComponent>(uid);
+            newAccent.Accent = accentComp.Accent;
+            newAccent.ReplacementPrototype = accentComp.ReplacementPrototype;
+
+            // Apply accent immediately if the item is currently equipped
+            if (component.User != null && TryComp<ClothingComponent>(uid, out var clothing))
+            {
+                var equipEvent = new ClothingGotEquippedEvent(component.User.Value, clothing);
+                RaiseLocalEvent(uid, ref equipEvent);
+            }
+        }
 
         component.Default = protoId;
         UpdateIdentityBlocker(uid, component, proto);

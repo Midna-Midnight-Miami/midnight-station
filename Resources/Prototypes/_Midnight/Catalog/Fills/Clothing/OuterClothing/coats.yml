@@ -1,0 +1,16 @@
+- type: entity
+  parent: ClothingOuterCoatSmuggler
+  id: ClothingOuterCoatSmugglerFilled
+  suffix: Chameleon, Holdout, Fill
+  components:
+  - type: StorageFill
+    contents:
+      - id: SmokeGrenade
+      - id: SmokeGrenade
+      - id: SmokeGrenade
+  - type: ContainerFill
+    containers:
+      holdout:
+        - Fulton
+      key_slots:
+        - EncryptionKeySmuggler

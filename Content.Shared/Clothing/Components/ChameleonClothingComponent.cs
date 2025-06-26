@@ -3,6 +3,9 @@ using Content.Shared.Inventory;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
+using Content.Shared.Body.Part;
+using Content.Shared.Armor;
+using Content.Shared.Damage;
 
 namespace Content.Shared.Clothing.Components;
 
@@ -38,7 +41,50 @@ public EntityUid? User;
  /// </summary>
  [DataField]
 public string? RequireTag;
+
+    /// <summary>
+    ///     Perceived armor coverage for examine text.
+    /// </summary>
+    [ViewVariables]
+    [AutoNetworkedField]
+    public List<BodyPartType>? PerceivedArmorCoverage;
+
+    /// <summary>
+    ///     Perceived armor modifiers for examine text.
+    /// </summary>
+    [ViewVariables]
+    [AutoNetworkedField]
+    public DamageModifierSet? PerceivedArmorModifiers;
+
+    /// <summary>
+    ///     Whether to hide perceived armor coverage in examine.
+    /// </summary>
+    [ViewVariables]
+    [AutoNetworkedField]
+    public bool PerceivedArmourCoverageHidden;
+
+    /// <summary>
+    ///     Whether to hide perceived armor modifiers in examine.
+    /// </summary>
+    [ViewVariables]
+    [AutoNetworkedField]
+    public bool PerceivedArmourModifiersHidden;
+
+    /// <summary>
+    ///     Whether to show perceived armor in examine.
+    /// </summary>
+    [ViewVariables]
+    [AutoNetworkedField]
+    public bool PerceivedShowArmorOnExamine;
+
+    /// <summary>
+    ///     Perceived accent for speech.
+    /// </summary>
+    [ViewVariables]
+    [AutoNetworkedField]
+    public string? PerceivedAccent;
 }
+
 
 [Serializable, NetSerializable]
 public sealed class ChameleonBoundUserInterfaceState : BoundUserInterfaceState

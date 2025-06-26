@@ -13,7 +13,7 @@
     tags:
     - Briefcase
     - WhitelistChameleon #Midnight
-    - ChameleonHandItem #Midnight
+    - HandStorageItem #Midnight
   - type: MeleeWeapon
     damage:
       types:

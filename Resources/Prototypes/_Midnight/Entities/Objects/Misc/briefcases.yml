@@ -9,7 +9,7 @@
     - type: ChameleonClothing
       slot: [NONE]
       default: CybersunBriefcase
-      requireTag: ChameleonHandItem
+      requireTag: HandStorageItem
     - type: UserInterface
       interfaces:
         enum.StorageUiKey.Key:

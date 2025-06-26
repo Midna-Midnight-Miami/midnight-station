@@ -26,7 +26,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon #Midnight - Holdout Chameleon briefcase
-    - ChameleonHandItem #Midnight
+    - HandStorageItem #Midnight
     - Toolbox
     - DroneUsable # Goobstation
   - type: GenericVisualizer

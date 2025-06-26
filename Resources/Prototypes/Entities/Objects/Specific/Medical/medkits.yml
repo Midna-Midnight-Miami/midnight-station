@@ -22,7 +22,7 @@
     tags:
     - Medkit
     - WhitelistChameleon #Midnight
-    - ChameleonHandItem #Midnight
+    - HandStorageItem #Midnight
 
 - type: entity
   name: burn treatment kit

@@ -24,7 +24,7 @@ selectable-set-thief-syndie-name = Syndie Kit
 selectable-set-thief-syndie-description =
     Trinkets from a disavowed past, or stolen from a careless agent?
     You've made some connections. Whiskey, echo...
-    Includes: An Emag, Access Breaker, Interdyne cigs, a Syndicate codeword,
+    Includes: An Emag, Interdyne cigs, a Syndicate codeword,
     a Radio Jammer, a lighter and some strange red crystals.
 
 selectable-set-thief-sleeper-name = Sleeper Kit
@@ -43,10 +43,11 @@ selectable-set-thief-communicator-description =
 
 selectable-set-thief-smuggler-name = Smuggler Kit
 selectable-set-thief-smuggler-description =
-    All thieves need somewhere to stash their goods in the dark.
-    Don't forget to link your fulton.
-    Includes: Fulton beacon, 10 fultons, 3 smoke grenades,
-    and an invisible crate to hide valuable loot.
+    All good thieves need a few stashes and contacts.
+    Look over your notes.
+    Includes: Ten fultons, smoke grenades, an invisible crate,
+    and some chameleon clothes with hidden compartments:
+    a slippery hat, radio coat, and quiet shoes.
 
 # Syndicate
 

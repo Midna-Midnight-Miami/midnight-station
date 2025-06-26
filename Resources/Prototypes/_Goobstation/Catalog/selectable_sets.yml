@@ -75,7 +75,6 @@
   - RadioJammer
   - TraitorCodePaper
   - Emag
-  - AccessBreaker
   - Lighter
   - CigPackSyndicate
   - Telecrystal50 # The thief cannot use them, but it may induce communication with traitors
@@ -114,12 +113,11 @@
     sprite: Clothing/Neck/Cloaks/void.rsi
     state: icon
   content:
+  - BoxFolderClipboardSmugglerFilled
+  - ClothingOuterCoatSmugglerFilled
+  - ClothingHeadHatSmuggler
+  - ClothingShoesSmuggler
   - InvisibleCrate
-  - FultonBeacon
-  - Fulton
-  - SmokeGrenade
-  - SmokeGrenade
-  - SmokeGrenade
 
 # Syndicate
 

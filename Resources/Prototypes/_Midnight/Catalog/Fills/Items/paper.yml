@@ -8,3 +8,12 @@
       - id: PaperHoldoutHat
       - id: PaperHoldoutShoes
       - id: PaperHoldoutCoat
+
+- type: entity
+  parent: BoxFolderClipboard
+  id: BoxFolderClipboardSmugglerFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: ForensicReportPaperSmuggler
+      - id: PaperCargoInvoiceSmuggler

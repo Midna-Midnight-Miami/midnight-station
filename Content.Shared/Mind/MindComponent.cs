@@ -106,7 +106,7 @@ public sealed partial class MindComponent : Component
     ///     The mind's current antagonist/special role, or lack thereof;
     /// </summary>
     [DataField, AutoNetworkedField]
-    public ProtoId<RoleTypePrototype> RoleType = "non-antagonist";
+    public ProtoId<RoleTypePrototype> RoleType = "Non-Antagonist";
 
     /// <summary>
     ///     The session of the player owning this mind.

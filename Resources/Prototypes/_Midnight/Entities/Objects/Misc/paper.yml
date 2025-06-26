@@ -43,6 +43,102 @@
       Slippery Style - its slippery, can fit pill bottle sized objects.
 
       Sneak-ers - Silent steps when you walk instead of run, but you can still hear your own steps.
+
+#I loathe that I had to do this, but FTL files could not handle the docs for some reason. I dont get it.
+- type: entity
+  name: 'MI13 "DV-300" Manual'
+  parent: Paper
+  id: PaperHoldoutBriefcase
+  description: 'A Manual for the MI13 "Dossier Vault".'
+  components:
+  - type: Paper
+    content: |
+      .
+                                        [color=#36454F]█▀▄▀█  ▀█▀    [color=#C0C0C0]  ▀█    ▀▀█
+                                        [color=#36454F]█   █   █     █       [color=#C0C0C0]     █    ▀▀█
+                                        [color=#36454F]█   █   █  ▄█▄    [color=#C0C0C0]  ▄█▄  ▄▄█ [/color]
+                                                   [italic]Silent Solutions.[/italic]
+
+      [head=1] "DOSSIER VAULT" Briefcase[/head]
+      [head=2]  Model DV-300 User Manual[/head]
+      [bold][/bold]
+      [bold]In collaboration with:[/bold]     [color=#2681a5]Cybersun Industries[/color] 
+      [bold]Product Code:[/bold]                     DV-300-EXEC  
+      [bold]Classification:[/bold]                     Restricted Equipment  
+      [bold]Version:[/bold]                                 4.0  
+      [bold]Last revision:[/bold]                      2623.03.15
+      
+      ─────────────────────────────────────
+      
+      [head=2]OPERATION INSTRUCTIONS[/head]
+      
+      [bold]Storage Access & Activation:[/bold]  
+      
+      To open:
+      
+      1. Hold or place briefcase as comfortable to manipulate. 
+      2. Administer screwdriver to hinge.
+      3. Specialized document compartment should audibly open. The sound will carry over a distance of 10 meters.
+      4. Chameleon controls are accessable for as long as the compartment is open.
+      
+      To close:
+      
+      Repeat steps to open, note that closing is noisy as well.
+      
+      It is advised to place the folder provided with this item into the folder compartment after thorough review of contents.
+      
+      [head=2]PRODUCT OVERVIEW[/head]
+      
+      The "Dossier Vault" represents another successful collaboration between Cybersun Industries and MI13. This executive briefcase provides ultra-secure document storage with our specialized chameleon technology to let you blend in in any enviroment.
+      
+      A Cybersun Hardlight Pen is a highly recommended companion item that can act as the screwdriver required.
+      
+      [head=2]TECHNICAL SPECIFICATIONS[/head]
+      
+      [bold]Base Unit:[/bold] Cybersun Industries Executive Series Briefcase
+      [bold]Storage Capacity:[/bold] Hidden compartment - one folder
+      [bold]Disguise Options:[/bold] Any medkit, briefcase, or toolbox configuration
+      
+      Note that disguising this item as a medkit will not change its internal storage capacity, so avoid letting people open it in such a state.  
+      
+      [head=2]FEATURES[/head]
+      
+      [bold]Concealed Storage:[/bold] Perfectly engineered slot for ONE (1) folder.
+      
+      [bold]Physical Security Protocol:[/bold] Dual-tool authentication (opening/closing) ensures compartment integrity against casual tampering. 
+      
+      [bold]Advanced Chameleon System:[/bold]  
+      [bullet] Multiple disguise configurations 
+      [bullet] Nigh-Instant transformation capability
+      
+      Each disguise includes appropriate weight simulation and surface texture to pass casual inspection. Note that it will always make a metalic "thunk" on impact with wall, floor or flesh regardless of the disguise.
+      
+      [head=2]MAINTENANCE[/head]
+      
+      [bullet] Clean exterior according to briefcase material specifications  
+      [bullet] Calibrate chameleon abilities weekly  
+      [bullet] Verify compartment seal integrity monthly 
+      
+      [head=2]TROUBLESHOOTING[/head]
+      
+      [bold]Disguise Flicker:[/bold] Ensure the item was not fully submerged in water or exposed to an EMP. If the device was, please take it to a certified MI13 technician.
+      [bold]Compartment jamming:[/bold] Percussive maintenance.
+      [bold]Lack of Audible Thunk on Closure:[/bold] Indicates improper seal. Reopen and re-close firmly. Normal operation includes a distinct thud.
+      [bold]Screwdriver Not Engaging:[/bold] Ensure correct orientation (flat head aligned with hinge slot). If stripped, contact MI13 Logistics for replacement (Form DV300-SR7 required). [bold]Do not[/bold] use unauthorized tools outside of emergency situations.
+      
+      ─────────────────────────────────────
+                           [color=#2681a5]In Partnership with Cybersun Industries[/color]
+
+      [color=#ff0000]                                      █▀ [/color][color=#2681a5]  █▀▀   █▀▀  [/color][color=#ff0000] ▀█ 
+      [/color]                                      [color=#ff0000]█  [/color][color=#2681a5]    █         ▀▀█    [/color][color=#ff0000]  █ 
+      [/color]                                      [color=#ff0000]▀▀ [/color][color=#2681a5]  ▀▀▀   ▀▀▀[/color][color=#ff0000]    ▀▀ [/color]
+      [color=#2681a5]                                      [italic]Patenting Protection.[/italic][/color]
+      ─────────────────────────────────────
+      [mono]Serial: DV-300-0847-D  
+      Base Unit: CBI-EXEC-4471  
+      QC Approved: D. Cipher, Document Security Division  
+      Cybersun Certification: Valid  
+      Field Tested: Operational[/mono]
         
 - type: entity
   name: 'MI13 "PS-100" Manual'

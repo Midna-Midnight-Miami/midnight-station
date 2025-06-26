@@ -217,7 +217,7 @@ public abstract class SharedRoleSystem : EntitySystem
     private ProtoId<RoleTypePrototype> GetRoleTypeByTime(MindComponent mind)
     {
         var role = GetRoleCompByTime(mind);
-        return role?.Comp?.RoleType ?? "non-antagonist";
+        return role?.Comp?.RoleType ?? "Non-Antagonist";
     }
 
     /// <summary>

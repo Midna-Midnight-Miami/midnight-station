@@ -75,3 +75,23 @@
     - SubGamemodesChaos
     - IonStormScheduler
     - SpaceTrafficControlEventScheduler
+
+
+- type: gamePreset
+  id: TheJanitor
+  alias:
+    - janitorstoryteller
+    - thejanitor
+    - janitorialincovenience
+  name: chaos-title
+  description: chaos-description
+  showInVote: true
+  minPlayers: 13
+  rules:
+    - CombatDynamic
+    - LavalandStormScheduler
+    - Honkops
+    - Wizard
+    - SubGamemodesChaos
+    - IonStormScheduler
+    - SpaceTrafficControlEventScheduler

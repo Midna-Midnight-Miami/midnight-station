@@ -83,8 +83,8 @@
     - janitorstoryteller
     - thejanitor
     - janitorialincovenience
-  name: chaos-title
-  description: chaos-description
+  name: mundane-title
+  description: mundane-description
   showInVote: true
   minPlayers: 13
   rules:

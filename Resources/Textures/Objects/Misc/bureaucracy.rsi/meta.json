@@ -245,7 +245,17 @@
     },
 	{
       "name": "contract-written"
+    },
+    {
+      "name": "paper_stamp-wizard",
+      "delays": [
+        [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      ]
     }
-
   ]
 }

@@ -1,0 +1,15 @@
+#
+
+- type: entity
+  name: wizard's rubber stamp
+  parent: [RubberStampBase, BaseMagicContraband]
+  id: RubberStampWizard
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-wizard
+    stampedColor: "#33ccff"
+    stampState: "paper_stamp-wizard"
+    stampLargeIcon: "large_stamp-wizard" # midnight
+  - type: Sprite
+    state: stamp-wizard

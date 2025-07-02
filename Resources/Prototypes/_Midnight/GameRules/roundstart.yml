@@ -131,7 +131,7 @@
   components:
   - type: SubGamemodes
     rules:
-    - id: BluespaceArtifact
+    - id: Thief
       prob: 3.0
     - id: MassHallucinations
       prob: 4.5

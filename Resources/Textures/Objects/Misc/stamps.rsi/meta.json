@@ -66,6 +66,17 @@
         },
         {
             "name": "stamp-psychologist"
-        }
-    ]
+        },
+        {
+      "name": "stamp-wizard",
+      "delays": [
+        [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      ]
+    }
+  ]
 }

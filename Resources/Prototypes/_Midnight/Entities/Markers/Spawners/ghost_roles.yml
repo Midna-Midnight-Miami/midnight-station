@@ -1,0 +1,70 @@
+#
+
+- type: entity
+  id: SpawnPointGhostOreBot
+  name: ghost role spawn point
+  suffix: ORE Model 925
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: ghost-role-information-orebot-name
+    description: ghost-role-information-orebot-description
+    rules: ghost-role-information-familiar-rules
+    mindRoles:
+    - MindRoleGhostRoleFamiliar
+    raffle:
+      settings: short
+  - type: GhostRoleMobSpawner
+    prototype: MobBotOREBot
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Midnight/Mobs/Silicon/Bots/orebot.rsi
+        state: orebot
+
+- type: entity
+  id: SpawnPointMaintsMouse
+  name: ghost role spawn point
+  suffix: LittleWay
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: ghost-role-information-maintsmouse-name
+    description: ghost-role-information-maintsmouse-description
+    rules: ghost-role-information-familiar-rules
+    mindRoles:
+    - MindRoleGhostRoleFamiliar
+    raffle:
+      settings: short
+  - type: GhostRoleMobSpawner
+    prototype: MobMouseLittleWay
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Midnight/Mobs/Animals/littleway.rsi
+        state: icon-0
+
+- type: entity
+  id: SpawnPointHonkDaughter
+  name: ghost role spawn point
+  suffix: HonkDaughter
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: ghost-role-information-honkdaughter-name
+    description: ghost-role-information-honkdaughter-description
+    rules: ghost-role-information-familiar-rules
+    mindRoles:
+    - MindRoleGhostRoleFamiliar
+    raffle:
+      settings: short
+  - type: GhostRoleMobSpawner
+    prototype: MobClownHonkDaughter
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Midnight/Mobs/Clown/honkdaughter.rsi
+        state: littleclown

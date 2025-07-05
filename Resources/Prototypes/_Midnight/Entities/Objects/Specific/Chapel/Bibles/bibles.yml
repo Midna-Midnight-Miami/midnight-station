@@ -1,0 +1,361 @@
+#
+
+- type: entity
+  name: corporate handbook
+  description: Closing the line between paper pusher and chaplain!
+  parent: BaseStorageItem
+  id: BibleCorporate
+  components:
+  - type: UseDelay
+    delay: 10.0
+  - type: Bible
+    damage:
+      groups:
+        Brute: -15
+        Burn: -15
+    damageOnFail:
+      groups:
+        Brute: 15
+        Airloss: 15
+    damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone
+      groups:
+        Burn: 10
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    damage:
+      types:
+        Holy: 5 # Goobstation - bro wtf
+        Blunt: 1
+  #- type: Prayable - no, use the altar
+  #  bibleUserOnly: true
+  - type: AlternatePrayable # Goobstation
+    requireBibleUser: false
+  - type: Summonable
+    specialItem: SpawnPointGhostOreBot
+  - type: ReactionMixer
+    mixMessage: "bible-mixing-success"
+    reactionTypes:
+    - CorporateHoly
+  - type: Sprite
+    sprite: _Midnight/Objects/Specific/Chapel/corporatehandbook.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Midnight/Objects/Specific/Chapel/corporatehandbook.rsi
+  - type: Clothing
+    slots:
+    - Belt
+  - type: Storage
+    grid:
+    - 0,0,0,1
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Material
+  - type: Tag
+    tags:
+    - Bible
+  - type: StealTarget
+    stealGroup: Bible
+
+- type: entity
+  name: maints hymns
+  description: Blessed be the Tider, for his Robustness is a marvel.
+  parent: BaseStorageItem
+  id: BibleMaints
+  components:
+  - type: UseDelay
+    delay: 10.0
+  - type: Bible
+    damage:
+      groups:
+        Brute: -15
+        Burn: -15
+    damageOnFail:
+      groups:
+        Brute: 15
+        Airloss: 15
+    damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone
+      groups:
+        Burn: 10
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    damage:
+      types:
+        Holy: 5 # Goobstation - bro wtf
+        Blunt: 1
+  #- type: Prayable - no, use the altar
+  #  bibleUserOnly: true
+  - type: AlternatePrayable # Goobstation
+    requireBibleUser: false
+  - type: Summonable
+    specialItem: SpawnPointMaintsMouse
+  - type: ReactionMixer
+    mixMessage: "bible-mixing-success"
+    reactionTypes:
+    - MaintsHoly
+  - type: Sprite
+    sprite: _Midnight/Objects/Specific/Chapel/maintshymns.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Midnight/Objects/Specific/Chapel/maintshymns.rsi
+  - type: Clothing
+    slots:
+    - Belt
+  - type: Storage
+    grid:
+    - 0,0,0,1
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Material
+  - type: Tag
+    tags:
+    - Bible
+  - type: StealTarget
+    stealGroup: Bible
+
+- type: entity
+  name: Gaia's Gift
+  description: Hug trees, go green!
+  parent: BaseStorageItem
+  id: BibleNature
+  components:
+  - type: UseDelay
+    delay: 10.0
+  - type: Bible
+    damage:
+      groups:
+        Brute: -15
+        Burn: -15
+    damageOnFail:
+      groups:
+        Brute: 15
+        Airloss: 15
+    damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone
+      groups:
+        Burn: 10
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    damage:
+      types:
+        Holy: 5 # Goobstation - bro wtf
+        Blunt: 1
+  #- type: Prayable - no, use the altar
+  #  bibleUserOnly: true
+  - type: AlternatePrayable # Goobstation
+    requireBibleUser: false
+  - type: Summonable
+    specialItem: SpawnPointGhostRemilia
+  - type: ReactionMixer
+    mixMessage: "bible-mixing-success"
+    reactionTypes:
+    - NatureHoly
+  - type: Sprite
+    sprite: _Midnight/Objects/Specific/Chapel/gaiasgift.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Midnight/Objects/Specific/Chapel/gaiasgift.rsi
+  - type: Clothing
+    slots:
+    - Belt
+  - type: Storage
+    grid:
+    - 0,0,0,1
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Material
+  - type: Tag
+    tags:
+    - Bible
+  - type: StealTarget
+    stealGroup: Bible
+
+- type: entity
+  name: divine blueprint
+  description: The universe follows an intelligent design and the only one who knows it is you.
+  parent: BaseStorageItem
+  id: BibleBlueprint
+  components:
+  - type: UseDelay
+    delay: 10.0
+  - type: Bible
+    damage:
+      groups:
+        Brute: -15
+        Burn: -15
+    damageOnFail:
+      groups:
+        Brute: 15
+        Airloss: 15
+    damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone
+      groups:
+        Burn: 10
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    damage:
+      types:
+        Holy: 5 # Goobstation - bro wtf
+        Blunt: 1
+  #- type: Prayable - no, use the altar
+  #  bibleUserOnly: true
+  - type: AlternatePrayable # Goobstation
+    requireBibleUser: false
+  - type: Summonable
+    specialItem: SpawnPointGhostRemilia
+  - type: ReactionMixer
+    mixMessage: "bible-mixing-success"
+    reactionTypes:
+    - BlueprintHoly
+  - type: Sprite
+    sprite: _Midnight/Objects/Specific/Chapel/divineblueprint.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Midnight/Objects/Specific/Chapel/divineblueprint.rsi
+  - type: Clothing
+    slots:
+    - Belt
+  - type: Storage
+    grid:
+    - 0,0,0,1
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Material
+  - type: Tag
+    tags:
+    - Bible
+  - type: StealTarget
+    stealGroup: Bible
+
+- type: entity
+  name: chaos manuscripts
+  description: Chaos almost makes the world seem like it's revolving.
+  parent: BaseStorageItem
+  id: BibleChaos
+  components:
+  - type: UseDelay
+    delay: 10.0
+  - type: Bible
+    damage:
+      groups:
+        Brute: -15
+        Burn: -15
+    damageOnFail:
+      groups:
+        Brute: 15
+        Airloss: 15
+    damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone
+      groups:
+        Burn: 10
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    damage:
+      types:
+        Holy: 5 # Goobstation - bro wtf
+        Blunt: 1
+  #- type: Prayable - no, use the altar
+  #  bibleUserOnly: true
+  - type: AlternatePrayable # Goobstation
+    requireBibleUser: false
+  - type: Summonable
+    specialItem: SpawnPointGhostRemilia
+  - type: ReactionMixer
+    mixMessage: "bible-mixing-success"
+    reactionTypes:
+    - ChaosHoly
+  - type: Sprite
+    sprite: _Midnight/Objects/Specific/Chapel/chaosmanuscript.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Midnight/Objects/Specific/Chapel/chaosmanuscript.rsi
+  - type: Clothing
+    slots:
+    - Belt
+  - type: Storage
+    grid:
+    - 0,0,0,1
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Material
+  - type: Tag
+    tags:
+    - Bible
+  - type: StealTarget
+    stealGroup: Bible
+
+- type: entity
+  name: Honkmother's Jokebook
+  description: Did you hear about the kidnapping at the school? It's okay, he woke up.
+  parent: BaseStorageItem
+  id: BibleJokeBook
+  components:
+  - type: UseDelay
+    delay: 10.0
+  - type: Bible
+    damage:
+      groups:
+        Brute: -15
+        Burn: -15
+    damageOnFail:
+      groups:
+        Brute: 15
+        Airloss: 15
+    damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone
+      groups:
+        Burn: 10
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    damage:
+      types:
+        Holy: 5 # Goobstation - bro wtf
+        Blunt: 1
+  #- type: Prayable - no, use the altar
+  #  bibleUserOnly: true
+  - type: AlternatePrayable # Goobstation
+    requireBibleUser: false
+  - type: Summonable
+    specialItem: SpawnPointHonkDaughter
+  - type: ReactionMixer
+    mixMessage: "bible-mixing-success"
+    reactionTypes:
+    - ClownHoly
+  - type: Sprite
+    sprite: _Midnight/Objects/Specific/Chapel/jokebook.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Midnight/Objects/Specific/Chapel/jokebook.rsi
+  - type: Clothing
+    slots:
+    - Belt
+  - type: Storage
+    grid:
+    - 0,0,0,1
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Material
+  - type: Tag
+    tags:
+    - Bible
+  - type: StealTarget
+    stealGroup: Bible

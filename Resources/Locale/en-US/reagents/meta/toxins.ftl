@@ -27,6 +27,9 @@
 reagent-name-toxin = toxin
 reagent-desc-toxin = An unsurprisingly toxic chemical. Available at an emagged chem dispenser.
 
+reagent-name-hotdogwater = hotdog water
+reagent-desc-hotdogwater = The water left over from boiling hotdogs, tasting it is gross.
+
 reagent-name-carpotoxin = carpotoxin
 reagent-desc-carpotoxin = A highly toxic reagent found in space carps. Causes a painful burning sensation.
 
@@ -53,6 +56,9 @@ reagent-desc-sulfuric-acid = A corrosive chemical. Keep away from your face.
 
 reagent-name-unstable-mutagen = unstable mutagen
 reagent-desc-unstable-mutagen = Causes mutations when injected into living people or plants. High doses may be lethal, especially in humans.
+
+reagent-name-stable-mutagen = stable mutagen
+reagent-desc-stable-mutagen = Causes mutations when injected into living people or plants, but acts as an effective brute medicine for Diona. High doses may be lethal, especially in humans.
 
 reagent-name-heartbreaker-toxin = heartbreaker toxin
 reagent-desc-heartbreaker-toxin = A hallucinogenic compound derived from mindbreaker toxin. it blocks neurological signals to the respiratory system, causing asphyxiation. Dexalin plus and epinephrine will filter it out, however.

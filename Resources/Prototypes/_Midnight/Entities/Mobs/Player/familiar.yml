@@ -1,0 +1,353 @@
+#
+
+- type: entity
+  name: ORE Model 925
+  parent: [ MobSiliconBase, FlyingMobBase ]
+  id: MobBotOREBot
+  description: A corporate appointed Chaplain familiar. Get ready to recite the dress code.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Midnight/Mobs/Silicon/Bots/orebot.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: orebot
+  - type: GhostRole
+    makeSentient: true
+    allowMovement: true
+    allowSpeech: true
+    name: ghost-role-information-orebot-name
+    description: ghost-role-information-orebot-description
+    rules: ghost-role-information-familiar-rules
+    mindRoles:
+    - MindRoleGhostRoleFamiliar
+  - type: GhostTakeoverAvailable
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Borg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 10
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: orebot
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      60: Critical
+      120: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: false
+    allowRevives: true
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+    locPrefix: silicon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 45
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: DamagedSiliconAccent
+  - type: UnblockableSpeech
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSilicon
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - Bot
+    - Unimplantable
+  - type: Access
+    tags:
+    - Chapel
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 3.5
+    softness: 2
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: MindContainer
+    showExamineInfo: true
+  - type: NpcFactionMember
+    factions:
+    - PetsNT
+  - type: Alerts
+  - type: Familiar
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+    - Service
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Service
+  - type: Summonable
+    specialItem: SpawnPointGhostOreBot
+  - type: Instrument
+    allowPercussion: false
+    handheld: false
+    bank: 1
+    program: 2
+  - type: UserInterface
+    interfaces:
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+        requireInputValidation: false
+      enum.BorgUiKey.Key:
+        type: BorgBoundUserInterface
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface
+        requireInputValidation: false
+  - type: SiliconLawBound
+  - type: ActionGrant
+    actions:
+    - ActionViewLaws
+  - type: SiliconLawProvider
+    laws: Oreimov
+  - type: IonStormTarget
+  - type: ZombieImmune
+  - type: ShowJobIcons
+  - type: Repairable
+    doAfterDelay: 10
+
+- type: entity
+  name: Little Way
+  parent: MobMouse
+  id: MobMouseLittleWay
+  description: A creative little wayfinder who's stolen a bluespace crayon like a true tider.
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _Midnight/Mobs/Animals/littleway.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: mouse-0
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: mouse-moving-0
+    noMovementLayers:
+      movement:
+        state: mouse-0
+  - type: Item
+    size: Tiny
+    heldPrefix: 0
+  - type: Clothing
+    quickEquip: false
+    sprite: _Midnight/Mobs/Animals/littleway.rsi
+    equippedPrefix: 0
+    slots:
+    - HEAD
+  - type: GhostRole
+    makeSentient: true
+    allowMovement: true
+    allowSpeech: true
+    name: ghost-role-information-maintsmouse-name
+    description: ghost-role-information-maintsmouse-description
+    rules: ghost-role-information-familiar-rules
+    mindRoles:
+    - MindRoleGhostRoleFamiliar
+  - type: GhostTakeoverAvailable
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - VimPilot
+  - type: Access
+    tags:
+    - Chapel
+  - type: MindContainer
+    showExamineInfo: true
+  - type: NpcFactionMember
+    factions:
+    - PetsNT
+  - type: Alerts
+  - type: Familiar
+  - type: Summonable
+    specialItem: SpawnPointMaintsMouse
+
+- type: entity
+  name: Honkdaughter
+  parent: [ SimpleMobBase, StripableInventoryBase ]
+  id: MobClownHonkDaughter
+  description: Look at me, Momma! I'm silly!
+  components:
+  - type: GhostRole
+    makeSentient: true
+    allowMovement: true
+    allowSpeech: true
+    name: ghost-role-information-honkdaughter-name
+    description: ghost-role-information-honkdaughter-description
+    rules: ghost-role-information-familiar-rules
+    mindRoles:
+    - MindRoleGhostRoleFamiliar
+  - type: Speech
+    speechSounds: Alto
+  - type: DamageForceSay
+  - type: Vocal
+    sounds:
+      Male: FemaleHuman
+      Female: FemaleHuman
+      Unsexed: FemaleHuman
+  - type: Emoting
+  - type: BodyEmotes
+    soundsId: GeneralBodyEmotes
+  - type: VentCrawler # goobstation - Ventcrawl
+    allowInventory: false
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: 
+      - "enum.DamageStateVisualLayers.Base"
+      state: littleclown
+      sprite: _Midnight/Mobs/Clown/honkdaughter.rsi
+  - type: Butcherable
+    spawned:
+    - id: MaterialBananium1
+      amount: 3
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: littleclown
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      75: Critical
+      150: Dead
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepClown
+  - type: Deathgasp
+    prototype: DefaultDeathgasp
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: GenericVisualizer
+    visuals:
+      enum.CreamPiedVisuals.Creamed:
+        clownedon:
+          True: {visible: true}
+          False: {visible: false}
+  - type: Body # Shitmed Change
+    bodyType: Complex
+    prototype: Monkey
+    requiredLegs: 2
+  - type: CanHostGuardian
+  - type: CreamPied
+  - type: Hands
+  - type: ComplexInteraction
+  - type: Internals
+  - type: FloatingVisuals
+  - type: Climbing
+  - type: Cuffable
+  - type: Ensnareable
+  - type: Clumsy
+  - type: CombatMode
+    canDisarm: true
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 3
+    sprite: Objects/Misc/ensnare.rsi
+    state: icon
+  - type: SSDIndicator
+  - type: StandingState
+  - type: Puller
+  - type: GhostTakeoverAvailable
+  - type: NPCRetaliation
+    attackMemoryLength: 10
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+  - type: Inventory
+    templateId: honkdaughter
+    speciesId: monkey
+  - type: Grammar
+    attributes:
+      gender: female
+      proper: true
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - AnomalyHost
+  - type: Access
+    tags:
+    - Chapel
+    - Theatre
+  - type: MindContainer
+    showExamineInfo: true
+  - type: NpcFactionMember
+    factions:
+    - PetsNT
+  - type: Alerts
+  - type: Familiar
+  - type: Summonable
+    specialItem: SpawnPointHonkDaughter

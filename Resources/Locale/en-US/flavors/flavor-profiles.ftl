@@ -263,6 +263,7 @@ flavor-complex-sake = like sweet, alcoholic rice
 flavor-complex-rum = like fermented sugar
 flavor-complex-coffee-liquor = like strong, bitter coffee
 flavor-complex-whiskey = like molasses
+flavor-complex-wildsnake = like smooth molasses
 flavor-complex-shitty-wine = like grape rinds
 flavor-complex-champagne = like freshly baked bread
 flavor-complex-iced-tea = like iced tea

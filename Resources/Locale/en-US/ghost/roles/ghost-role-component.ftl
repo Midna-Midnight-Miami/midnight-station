@@ -166,6 +166,15 @@ ghost-role-information-closet-skeleton-description = You are arguably one of the
 ghost-role-information-remilia-name = Remilia, the Chaplain's Familiar
 ghost-role-information-remilia-description = Follow and obey the chaplain. Eat fruit. Screech loudly into people's ears and write it off as echolocation.
 
+ghost-role-information-orebot-name = ORE Model 925, the Chaplain's Familiar
+ghost-role-information-orebot-description = Follow and obey the chaplain. Get obsessed with paper work. Call people weird for not knowing company policy.
+
+ghost-role-information-maintsmouse-name = Little Way, the Chaplain's Familiar
+ghost-role-information-maintsmouse-description = Follow and obey the chaplain. Help them find things to steal. Be a robust little mouse... Or have fun with a bluespace crayon you stole!
+
+ghost-role-information-honkdaughter-name = Honk Daughter, the Chaplain's Familiar
+ghost-role-information-honkdaughter-description = Follow and obey the chaplain. Cause chaos for the Honkmother. Be an evil little clown!
+
 ghost-role-information-cerberus-name = Cerberus, Evil Familiar
 ghost-role-information-cerberus-description = Obey your master. Spread chaos.
 

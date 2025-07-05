@@ -1332,6 +1332,56 @@
   - !type:ExtinguishTileReaction { }
 
 - type: reagent
+  id: PurifiedWater
+  name: reagent-name-purifiedwater
+  group: Medicine
+  desc: reagent-desc-purifiedwater
+  physicalDesc: reagent-physical-desc-refreshing
+  flavor: holy
+  color: "#a2cefb"
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+    Medicine:
+      effects:
+      - !type:CleanseCult # DeltaV - Cosmic Cult
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+      - !type:HealthChange
+        conditions:
+        - !type:TotalDamage
+          max: 50
+        damage:
+          types:
+            Blunt: -0.2
+            Poison: -0.2
+            Heat: -0.2
+            Shock: -0.2
+            Cold: -0.2
+  reactiveEffects:
+    Extinguish:
+      methods: [ Touch ]
+      effects:
+      - !type:ExtinguishReaction
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false
+        damage:
+          types:
+            Holy: 2
+  plantMetabolism:
+  - !type:PlantAdjustWater
+    amount: 1
+  tileReactions:
+  - !type:ExtinguishTileReaction { }
+
+- type: reagent
   id: Pyrazine
   name: reagent-name-pyrazine
   group: Medicine

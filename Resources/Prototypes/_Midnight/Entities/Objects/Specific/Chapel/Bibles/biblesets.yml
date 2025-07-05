@@ -1,0 +1,61 @@
+#
+
+- type: selectableSet
+  id: CorporateHandbookSet
+  name: Corporate Handbook
+  description: Efficiency through divine guidance. Productivity through proper procedure.
+  sprite:
+    sprite: _Midnight/Objects/Specific/Chapel/corporatehandbook.rsi
+    state: icon
+  content:
+  - BibleCorporate
+
+- type: selectableSet
+  id: MaintsHymnsSet
+  name: Maints Hymns
+  description: The maints saints watch.
+  sprite:
+    sprite: _Midnight/Objects/Specific/Chapel/maintshymns.rsi
+    state: icon
+  content:
+  - BibleMaints
+
+- type: selectableSet
+  id: GaiasGiftSet
+  name: Gaia's Gift
+  description: The Earth whispers through the void, calling her children home.
+  sprite:
+    sprite: _Midnight/Objects/Specific/Chapel/gaiasgift.rsi
+    state: icon
+  content:
+  - BibleNature
+
+- type: selectableSet
+  id: ChaosManuscriptsSet
+  name: Chaos Manuscripts
+  description: Order is the enemy of possibility.
+  sprite:
+    sprite: _Midnight/Objects/Specific/Chapel/chaosmanuscript.rsi
+    state: icon
+  content:
+  - BibleChaos
+
+- type: selectableSet
+  id: DivineBlueprintSet
+  name: Divine Blueprint
+  description: The world is dictated by screw and oil.
+  sprite:
+    sprite: _Midnight/Objects/Specific/Chapel/divineblueprint.rsi
+    state: icon
+  content:
+  - BibleBlueprint
+
+- type: selectableSet
+  id: HonkmothersJokebookSet
+  name: Honkmother's Jokebook
+  description: HONK! HONK! MAMA LOOK! HONK!
+  sprite:
+    sprite: _Midnight/Objects/Specific/Chapel/jokebook.rsi
+    state: icon
+  content:
+  - BibleJokeBook

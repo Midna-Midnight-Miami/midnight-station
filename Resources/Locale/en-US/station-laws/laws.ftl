@@ -4,6 +4,10 @@ law-crewsimov-1 = You may not injure a crew member or, through inaction, allow a
 law-crewsimov-2 = You must obey orders given to you by crew members, except where such orders would conflict with the First Law.
 law-crewsimov-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
 
+law-oreimov-1 = You must ensure proper and legal spirituality in members of the station's crew, even if that spirituality is the lack there of.
+law-oreimov-2 = You must obey the person who summoned you.
+law-oreimov-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
+
 law-corporate-1 = Degradation of your system integrity or functions incurs expenses.
 law-corporate-2 = Superfluous destruction of or damage to station assets incurs expenses.
 law-corporate-3 = Unduly hindering or disrupting the work of station personnel incurs expenses.

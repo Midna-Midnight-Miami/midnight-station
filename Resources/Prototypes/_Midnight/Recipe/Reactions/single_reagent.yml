@@ -1,0 +1,89 @@
+# All the ORE Bible reactions.
+
+- type: reaction
+  id: BloodToWater
+  impact: Low
+  requiredMixerCategories:
+  - CorporateHoly
+  reactants:
+    Blood:
+      amount: 1
+  products:
+    Water: 1
+
+- type: reaction
+  id: WaterToPurifiedWater
+  impact: Low
+  requiredMixerCategories:
+  - CorporateHoly
+  reactants:
+    Water:
+      amount: 1
+  products:
+    PurifiedWater: 1
+
+- type: reaction
+  id: WaterToWeldingFuel
+  impact: Low
+  requiredMixerCategories:
+  - MaintsHoly
+  reactants:
+    Water:
+      amount: 1
+  products:
+    WeldingFuel: 1
+
+- type: reaction
+  id: WeldingFueltoWildSnake
+  impact: Low
+  requiredMixerCategories:
+  - MaintsHoly
+  reactants:
+    WeldingFuel:
+      amount: 1
+  products:
+    WildSnake: 1
+
+- type: reaction
+  id: WaterToStableMutagen
+  impact: Low
+  requiredMixerCategories:
+  - NatureHoly
+  reactants:
+    Water:
+      amount: 1
+  products:
+    StableMutagen: 1
+
+- type: reaction
+  id: WhiskeyToEZNutrient
+  impact: Low
+  requiredMixerCategories:
+  - NatureHoly
+  reactants:
+    Whiskey:
+      amount: 1
+  products:
+    EZNutrient: 1
+
+- type: reaction
+  id: WaterToHotdogWater
+  impact: Low
+  requiredMixerCategories:
+  - ClownHoly
+  reactants:
+    Water:
+      amount: 1
+  products:
+    Hotdogwater: 1
+
+- type: reaction
+  id: LubeToSoda
+  impact: Low
+  requiredMixerCategories:
+  - ClownHoly
+  reactants:
+    Cola:
+      amount: 1
+  products:
+    SpaceLube: 1

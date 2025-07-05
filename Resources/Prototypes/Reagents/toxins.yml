@@ -22,6 +22,33 @@
             Poison: 4
 
 - type: reagent
+  id: Hotdogwater
+  name: reagent-name-hotdogwater
+  group: Toxins
+  desc: reagent-desc-hotdogwater
+  flavor: falsemeat
+  color: "#97bbdf"
+  physicalDesc: reagent-physical-desc-funny
+  plantMetabolism:
+  - !type:PlantAdjustToxins
+    amount: 2
+  - !type:PlantAdjustHealth
+    amount: -1
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: .5
+      - !type:ChemVomit
+        probability: 0.05
+      - !type:CleanseCult # DeltaV - Cosmic Cult
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+
+- type: reagent
   id: CarpoToxin
   name: reagent-name-carpotoxin
   group: Toxins
@@ -296,6 +323,41 @@
         damage:
           types:
             Radiation: 3
+
+- type: reagent
+  id: StableMutagen
+  name: reagent-name-stable-mutagen
+  group: Toxins
+  desc: reagent-desc-stable-mutagen
+  physicalDesc: reagent-physical-desc-glowing
+  flavor: bitter
+  color: "#00ff5f"
+  boilingPoint: 340282300000000000000000000000000000000 # Ethidium bromide, which doesn't boil.
+  meltingPoint: 261.0
+  plantMetabolism:
+  - !type:PlantAdjustMutationLevel
+    amount: 1
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Radiation: 3
+      - !type:CleanseCult # DeltaV - Cosmic Cult
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+      - !type:HealthChange
+        damage:
+          types:
+            Radiation: -6
+            Blunt: -1
+            Slash: -1
+            Piercing: -1
+        conditions:
+        - !type:OrganType
+          type: Plant
 
 - type: reagent
   id: HeartbreakerToxin

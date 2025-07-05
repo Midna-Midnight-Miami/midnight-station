@@ -2354,3 +2354,44 @@
         - !type:OrganType
           type: Dwarf
           shouldHave: false
+
+- type: reagent
+  id: WildSnake
+  name: reagent-name-wildsnake
+  parent: BaseAlcohol
+  desc: reagent-desc-wildsnake
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: wildsnake
+  color: "#eea932"
+  recognizable: true
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/whiskeyglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
+    Medicine:
+      effects:
+      - !type:CleanseCult # DeltaV - Cosmic Cult
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+      - !type:HealthChange
+        conditions:
+        - !type:TotalDamage
+          max: 40
+        damage:
+          types:
+            Blunt: -0.1
+            Poison: -0.1
+            Heat: -0.1
+            Shock: -0.1
+            Cold: -0.1

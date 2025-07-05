@@ -761,6 +761,11 @@
   description: flavor-complex-whiskey
 
 - type: flavor
+  id: wildsnake
+  flavorType: Complex
+  description: flavor-complex-wildsnake
+
+- type: flavor
   id: shittywine
   flavorType: Complex
   description: flavor-complex-shitty-wine

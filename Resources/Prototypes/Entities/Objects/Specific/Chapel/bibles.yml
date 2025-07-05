@@ -13,13 +13,17 @@
   - type: SetSelector
     possibleSets:
     - BibleSet
-    - QuaranSet
-    - TanakhSet
+    - CorporateHandbookSet
+    - MaintsHymnsSet
+    - GaiasGiftSet
+    - ChaosManuscriptsSet
+    - DivineBlueprintSet
+    - HonkmothersJokebookSet
     maxSelectedSets: 1
 
 - type: selectableSet
   id: BibleSet
-  name: The Holy Bible
+  name: The Holy Space Bible
   description: Sever any tie, but the ties that bind me to your service and to your heart.
   sprite:
     sprite: Objects/Specific/Chapel/bible.rsi
@@ -27,29 +31,10 @@
   content:
   - Bible
 
-- type: selectableSet
-  id: QuaranSet
-  name: The Quaran
-  description: Then which of your Lord’s favours will you ˹humans and jinn˺ both deny?
-  sprite:
-    sprite: _Goobstation/Objects/Specific/Chapel/allah.rsi
-    state: icon
-  content:
-  - BibleQuaran
-
-- type: selectableSet
-  id: TanakhSet
-  name: The Tanakh Scrolls
-  description: As you teach, you learn.
-  sprite:
-    sprite: _Goobstation/Wizard/Objects/scroll.rsi
-    state: scroll2
-  content:
-  - BibleTanakh
 ##END SET SELECTION
 
 - type: entity
-  name: bible
+  name: space bible
   description: New Interstellar Version 2340.
   parent: BaseStorageItem
   id: Bible

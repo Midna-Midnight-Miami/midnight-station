@@ -71,6 +71,9 @@ reagent-desc-vodka = Clear distilled alcoholic beverage that originates from Pol
 reagent-name-whiskey = whiskey
 reagent-desc-whiskey = A type of distilled alcoholic beverage made from fermented grain mash.
 
+reagent-name-wildsnake = wild snake
+reagent-desc-wildsnake = A blessed whiskey from the Maintenance Saints, created by blessing Welder Fluid into the favored drink of Saint Shanks.
+
 reagent-name-wine = wine
 reagent-desc-wine = A premium alcoholic beverage made from distilled grape juice.
 

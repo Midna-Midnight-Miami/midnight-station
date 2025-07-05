@@ -1,0 +1,24 @@
+# Made for ORE Silicons
+
+- type: siliconLaw
+  id: Oreimov1
+  order: 1
+  lawString: law-oreimov-1
+
+- type: siliconLaw
+  id: Oreimov2
+  order: 2
+  lawString: law-oreimov-2
+
+- type: siliconLaw
+  id: Oreimov3
+  order: 3
+  lawString: law-oreimov-3
+
+- type: siliconLawset
+  id: Oreimov
+  laws:
+  - Oreimov1
+  - Oreimov2
+  - Oreimov3
+  obeysTo: laws-owner-crew

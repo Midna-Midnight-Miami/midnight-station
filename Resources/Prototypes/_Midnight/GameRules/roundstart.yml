@@ -132,9 +132,9 @@
   - type: SubGamemodes
     rules:
     - id: Thief
-      prob: 3.0
-    - id: MassHallucinations
-      prob: 4.5
+      prob: 1.4
+    - id: CalmPestEventsTable
+      prob: 2.0
     - id: AnomalySpawn
       prob: 2.7
     - id: KudzuGrowth

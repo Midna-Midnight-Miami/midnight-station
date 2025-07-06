@@ -18,3 +18,4 @@ thankyou-news-1 = Go investiage security!
 thankyou-news-2 = Go interview command!
 thankyou-news-3 = Go write a story!
 thankyou-news-4 = This means a lot to me.
+thankyou-news-5 = Get me pictures of Tiderman!

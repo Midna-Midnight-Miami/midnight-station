@@ -1,0 +1,11 @@
+- type: entity
+  parent: GameRuleMeteorSwarm
+  id: GameRuleMeteorSwarmHELL
+  components:
+  - type: StationEvent
+    weight: 1
+  - type: MeteorSwarm
+    meteors:
+      MeteorSmall: 168
+      MeteorMedium: 150
+      MeteorLarge: 67

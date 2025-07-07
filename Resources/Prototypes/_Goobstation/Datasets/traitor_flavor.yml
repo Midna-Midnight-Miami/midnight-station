@@ -1,17 +1,14 @@
-#
-
 - type: dataset
   id: TraitorFlavor
   values:
   - "arc" # animal rights consortium
-  - "blf" # bee liberation front
   - "cybersun"
   - "corporateclimber"
   - "donkco"
   - "gorlex"
-  - "legaltrouble"
+  - "interdyne"
   - "mi13"
+  - "ormg"
+  - "self"
   - "tiger" # tiger cooperative
   - "waffleco"
-  - "waffleco-terrorist"
-  - "nvf" # Neulithiv Visionary Federation

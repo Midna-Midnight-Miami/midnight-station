@@ -1,75 +1,71 @@
-<!--
-
--->
-
 <Document>
   # Roleplay Rule 11 - Follow reasonable escalation
-  Antagonists are fully exempt from escalation rules. Non-antagonists who are in a conflict with antagonists are not exempt. Escalation should typically follow steps or a pattern of conflict types similar to:
+  Before escalating any conflict, ask yourself: "Is this something that a reasonable person in this circumstance would do, and does it contribute to a story?"
+
+  Escalation follows these steps:
   - Verbal
-  - Non-harmful
   - Non-lethal
   - Lethal
-  - Permanently lethal
+  - Round-removal
 
-  All new conflicts should start at the first step. A player should not escalate a conflict across steps without some escalation from the other party involved in the conflict. Players can skip steps to match the level of escalation that the other person is at, but should almost always not skip steps other than that. Players who attempt to deescalate conflicts will be given more leniency in escalating if the other party continues to escalate despite the attempt at de-escalation. You do not have to try to deescalate conflicts, but someone who watches you over the entire round, or over multiple rounds, should not feel that your goal is generally to escalate conflicts.
+  ## Baseline Escalation by Severity
+  Your severity determines where you can start conflicts and how quickly you can escalate:
 
-  Conflicts or escalation can be indirect. When someone steals someone else's ID, the theft is a direct part of the conflict, but if the victim becomes trapped as a result of not having their ID to open a door, that is also considered part of the conflict and escalation. Do not randomly steal IDs from people.
+  **Crew-aligned/Non-antagonist:** Must start at verbal escalation. Can escalate one level beyond opponent's current level.
+  
+  **Free agent:** Can start conflicts at non-lethal escalation. Can escalate one level beyond opponent's current level.
+  
+  **Minor antagonist:** Can start conflicts at non-lethal escalation. Can escalate one level beyond opponent's current level.
+  
+  **Moderate antagonist:** Can start conflicts at lethal escalation. Can escalate one level beyond opponent's current level.
+  
+  **Major antagonist:** Not bound by escalation limits.
 
-  Escalation does not have to be directed at a specific player to enter them into a conflict. Nuclear operatives who are trying to destroy the station are considered to be at the permanently lethal level of conflict with all crew on the station. Someone who kills a station pet has started some degree of conflict with all crewmembers. Someone who kills a mouse that a chef was caring for has started some degree of conflict with that chef.
+  ## Team Antagonist Escalation Override
+  Team antagonists must always follow escalation rules starting at verbal when in conflict with teammates, regardless of their individual severity baseline. The implicit goal to keep teammates alive overrides individual severity escalation permissions.
 
-  You will be considered to be violating this rule if you escalate a conflict based on a poor or unreasonable assumption.
+  ## Escalation Rules
+  The "aggressor" is whoever most recently escalated the conflict. The "defender" chooses whether to match escalation or escalate further.
 
-  Conflicts should almost never reach the "permanently lethal" stage. Conflicts should only reach this stage if the other party brought it to the stage, or if the same conflict escalated to the lethal stage multiple times in the round.
+  You can skip escalation steps to match your opponent's level, but should not skip steps beyond that except as allowed by your severity level.
 
-  If a party in the conflict goes into crit or dies, the party responsible should take them to get treatment or to security. For the conflict, this should be considered saving someone from dying and should deescalate the conflict. If the conflict is deescalated in this way, both parties need to re-escalate to lethal for the conflict to return to that stage. If the conflict is not deescalated in this way, then only the party who defeated the other would need to re-escalate for the conflict to return to the lethal stage.
+  Someone observing you over a round should not conclude that your goal is to escalate conflicts. Deescalation is not required, but attempts to deescalate give you more flexibility if conflict resumes.
 
-  Security can immediately escalate to non-lethal force if it is necessary to arrest someone.
+  ## Conflict Types
+  **Direct Conflict:** Physical confrontation, direct theft from person, vandalism to someone's immediate workspace.
 
-  People using or brandishing Syndicate items can typically be presumed to have lethal intent. Someone with lethal intent can typically be immediately escalated against at a lethal level, a notable exception is if you have the tools to safely detain them.
+  **Indirect Conflict:** Harming someone's broader workplace, stealing their belongings/pets, actions that affect them without direct confrontation. Indirect conflicts can only escalate to non-lethal at maximum.
 
-  ## Escalation Involving Animals
-  See [textlink="Escalation Involving Animals" link="RuleR11-1"].
+  **Random Theft/Vandalism:** Taking items or vandalizing areas without specific IC justification is considered starting a conflict at non-lethal level.
 
-  ## Exemptions
-  Escalation rules aren't enforced against non-players, but players will be held responsible for rule violations even if they don't realize that a character or animal was controlled by another player. Characters who are disconnected are still considered players. Characters who have purple text upon being examined saying "recovery is impossible" are considered non-players.
+  ## Round-removal Escalation
+  Round-removal can only be reached through:
+  - Natural progression after lethal combat has occurred 3+ between conflicting parties
+  - Being a Major antagonist
+  - Opponent bringing conflict to round-removal first
 
-  ## MRP Amendment
-  Escalation rules are enforced even against non-players.
+  ## Special Cases
+  **Security:** Can immediately escalate to non-lethal force when necessary to arrest someone, and may escalate to lethal if they are met with nonlethal force during an arrest.
 
-  ## Examples of Conflict Types
-  See [textlink="Examples of Conflict Types" link="RuleR11-2"].
+  **High-Risk Areas:** Unauthorized entry into critical areas (armory, atmospherics, etc.) justifies immediate non-lethal escalation.
 
-  ## Example Scenarios
-  These examples assume that you are not an antagonist.
+  ## Examples
+  **Acceptable:**
+  - Minor antagonist immediately disabling someone who spots them during a break-in
+  - Moderate antagonist shooting someone who refuses to hand over an objective item
+  - Free agent starting a bar fight for the hell of it
+  - Crew member punching back after being punched, taking attacker to medical after they go into crit
+  - Major antagonist immediately killing anyone who gets in their way
+  - Team antagonists arguing verbally before escalating to physical conflict with each other
 
-  Acceptable:
-  - A player starts punching you, so you start punching back until they stop. If they go into crit, you stop attacking them and take them to security or to get medical attention.
-  - You make fun of a clown, who then throws a pie at you and steals your shoes. You slip the clown and steal their mask.
-  - You are a security officer and tell someone to stop, so you can question them. They run away, so you use your disabler to stun and cuff them.
-  - You are a security officer and see someone wearing a syndicate hardsuit, so you shoot them to crit, cuff them, then take them to security.
-  - You are a crewmember and see a nuclear operative, so you kill them.
-  - An unauthorized person enters a high risk area of the station, like the armory or atmospherics, so you attack them until they leave.
-  - Minorly inconveniencing someone for your own benefit.
-  - As an antagonist, killing someone who got in your way.
-  - As an antagonist, killing someone who didn't give you what you want.
-  - A chef and bartender reach the lethal level of conflict through appropriate escalation. The chef crits the bartender and does not take them to medbay or security. The bartender immediately tries to crit the chef next time they run into each other.
-  - A chef and bartender reach the lethal level of conflict through appropriate escalation. The chef crits the bartender and does not take them to medbay or security. The chef insults the bartender next time they see them.
-  - A chef and bartender reach the lethal level of conflict through appropriate escalation repeatedly, and the chef kills the bartender several times. The bartender crits the chef and takes active steps to prevent their revival for the protection of the bar.
-  - A cargo technician gets a cargo bounty for a brain. After receiving a body from Medical with the purple examine text reading "Any recovery is impossible.", the cargo technician proceeds to permanently destroy the body to get the brain out.
+  **Prohibited:**
+  - Crew member immediately stabbing someone who insulted them
+  - Minor antagonist killing someone for witnessing petty theft
+  - Free agent killing the bartender because they're bored
+  - Anyone escalating based on poor assumptions about someone's intentions
+  - Continuing to attack someone after they've gone into crit without taking them for medical attention
+  - Team antagonists immediately attacking each other without verbal escalation first
 
-  Prohibited:
-  - A player starts punching you, so you gib them.
-  - A clown throws a pie at you and steals your shoes, so you stab them to crit with a screwdriver.
-  - You are a security officer and tell someone to stop, so you can question them. They run away so you use a truncheon to beat them to crit.
-  - An authorized person who you unreasonably or carelessly think is unauthorized enters a high risk area of the station, like the armory or atmospherics, so you attack them until they leave.
-  - An unauthorized person enters a low risk area of the station, like cargo, and you start attacking them with no other escalation.
-  - Slipping security all round because they are security.
-  - Blocking the head of personnel in their office using walls because they didn't give you what you asked for.
-  - Hiding someone's body because they punched you earlier in the round.
-  - Harassing the bar or bartender by frequently coming in to break their glasses or furniture.
-  - Randomly picking fights with people.
-  - Stealing an ID from a disconnected player as a non-antagonist.
-  - A chef and bartender reach the lethal level of conflict through appropriate escalation. The chef crits the bartender and does not take them to medbay or security. The chef immediately tries to crit the bartender next time they run into each other.
-  - A chef and bartender reach the lethal level of conflict through appropriate escalation. The chef crits the bartender and takes them to the medbay or security. The bartender immediately tries to crit the chef next time they run into each other.
-  - A cargo technician gets a cargo bounty for a brain. After finding a dead passenger in a hallway, without the body's examine text reading "Any recovery is impossible.", the cargo technician proceeds to permanently destroy the body to get the brain out.
+  ## Deescalation
+  If you defeat someone in lethal combat, taking them to medical or security deescalates the conflict. Both parties must re-escalate to return to lethal levels. If you don't provide aid, the loser may promptly re-escalate, but the victor retains no such privilege.
 </Document>

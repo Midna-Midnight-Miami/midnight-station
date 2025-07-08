@@ -1,0 +1,73 @@
+<Document>
+  # Roleplay Rule 9 - Follow reasonable escalation
+  Before escalating any conflict, ask yourself: "Is this something that a reasonable person in this circumstance would do, and does it contribute to a story?"
+
+  Escalation with animals is looser than with people, especially with NPC animals.
+
+  Escalation follows these steps:
+  - Verbal
+  - Non-lethal
+  - Lethal
+  - Round-removal
+
+  ## Baseline Escalation by Severity
+  Your severity determines where you can start conflicts and how quickly you can escalate:
+
+  **Crew-aligned/Non-antagonist:** Must start at verbal escalation. Can escalate one level beyond opponent's current level.
+  
+  **Free agent:** Can start conflicts at non-lethal escalation. Can escalate one level beyond opponent's current level.
+  
+  **Minor antagonist:** Can start conflicts at non-lethal escalation. Can escalate one level beyond opponent's current level.
+  
+  **Moderate antagonist:** Can start conflicts at lethal escalation. Can escalate one level beyond opponent's current level.
+  
+  **Major antagonist:** Not bound by escalation limits.
+
+  ## Team Antagonist Escalation Override
+  Team antagonists must always follow escalation rules starting at verbal when in conflict with teammates, regardless of their individual severity baseline. The implicit goal to keep teammates alive overrides individual severity escalation permissions.
+
+  ## Escalation Rules
+  The "aggressor" is whoever most recently escalated the conflict. The "defender" chooses whether to match escalation or escalate further.
+
+  You can skip escalation steps to match your opponent's level, but should not skip steps beyond that except as allowed by your severity level.
+
+  Someone observing you over a round should not conclude that your goal is to escalate conflicts. Deescalation is not required, but attempts to deescalate give you more flexibility if conflict resumes.
+
+  ## Conflict Types
+  **Direct Conflict:** Physical confrontation, direct theft from person, vandalism to someone's immediate workspace.
+
+  **Indirect Conflict:** Harming someone's broader workplace, stealing their belongings/pets, actions that affect them without direct confrontation. Indirect conflicts can only escalate to non-lethal at maximum.
+
+  **Random Theft/Vandalism:** Taking items or vandalizing areas without specific IC justification is considered starting a conflict at non-lethal level.
+
+  ## Round-removal Escalation
+  Round-removal can only be reached through:
+  - Natural progression after lethal combat has occurred 3+ between conflicting parties
+  - Being a Major antagonist
+  - Opponent bringing conflict to round-removal first
+
+  ## Special Cases
+  **Security:** Can immediately escalate to non-lethal force when necessary to arrest someone, and may escalate to lethal if they are met with nonlethal force during an arrest.
+
+  **High-Risk Areas:** Unauthorized entry into critical areas (armory, atmospherics, etc.) justifies immediate non-lethal escalation.
+
+  ## Examples
+  **Acceptable:**
+  - Minor antagonist immediately disabling someone who spots them during a break-in
+  - Moderate antagonist shooting someone who refuses to hand over an objective item
+  - Free agent starting a bar fight for the hell of it
+  - Crew member punching back after being punched, taking attacker to medical after they go into crit
+  - Major antagonist immediately killing anyone who gets in their way
+  - Team antagonists arguing verbally before escalating to physical conflict with each other
+
+  **Prohibited:**
+  - Crew member immediately stabbing someone who insulted them
+  - Minor antagonist killing someone for witnessing petty theft
+  - Free agent killing the bartender because they're bored
+  - Anyone escalating based on poor assumptions about someone's intentions
+  - Continuing to attack someone after they've gone into crit without taking them for medical attention
+  - Team antagonists immediately attacking each other without verbal escalation first
+
+  ## Deescalation
+  If you defeat someone in lethal combat, taking them to medical or security deescalates the conflict. Both parties must re-escalate to return to lethal levels. If you don't provide aid, the loser may promptly re-escalate, but the victor retains no such privilege.
+</Document>

@@ -124870,7 +124870,7 @@ entities:
     - type: Transform
       pos: 5.436387,5.4152575
       parent: 2
-- proto: PlushieBingleSmall
+- proto: PlushieCuptain
   entities:
   - uid: 11404
     components:

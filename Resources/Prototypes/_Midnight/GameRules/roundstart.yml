@@ -12,8 +12,6 @@
       prob: 1.6
     - id: AnomalySpawn
       prob: 1.8
-    - id: BingleSpawn
-      prob: 1.6
     - id: SlimesSpawn
       prob: 1.8
     - id: SpiderSpawn

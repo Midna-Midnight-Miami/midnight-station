@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Resources/ServerInfo/Guidebook/ServerRules/RoleplayRules/RuleR14SecComStandard.xml
 <!--
 SPDX-FileCopyrightText: 2024 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
 SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
@@ -5,13 +6,16 @@ SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
+=======
+>>>>>>> c3cceb43f7 (rules changes + wackamolling bingles WHY DO THEY KEEP COMING BACK IM GONNA DIE):Resources/ServerInfo/Guidebook/ServerRules/RoleplayRules/RuleR5SecComStandard.xml
 <Document>
-  # Roleplay Rule 14 - Set an example if playing command or security
+  # Roleplay Rule 5 - Set an example if playing command or security
   All command and security roles are held to stricter interpretations of the rules.
   - Command roles are not learning roles. Members of command must be competent.
   - Security roles are not for inexperienced players. Members of security are expected to know game basics and be more familiar with server rules than a new player.
   - Do not hinder or cause overall negative effects to the station or crew as a member of command or security.
   - Do not abuse your power as command or security.
+  - Do not unreasonably violate space law as security or command.
 
   ## Why
   Members of command and security can often have a larger impact on the nature of the round than other players. For example, a captain who tries to bend or break the rules will often cause many others on the station to do the same. Memey station announcements from members of command also often result in the rest of the station acting the same way. When command and security members hold themselves to high standards, the rest of the station often naturally follows to a significant degree.

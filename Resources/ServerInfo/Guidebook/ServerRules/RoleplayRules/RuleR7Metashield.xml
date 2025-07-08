@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Resources/ServerInfo/Guidebook/ServerRules/RoleplayRules/RuleR4Metashield.xml
 <!--
 SPDX-FileCopyrightText: 2024 BombasterDS <115770678+BombasterDS@users.noreply.github.com>
 SPDX-FileCopyrightText: 2024 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
@@ -8,8 +9,10 @@ SPDX-FileCopyrightText: 2025 Rouge2t7 <81053047+Sarahon@users.noreply.github.com
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
+=======
+>>>>>>> c3cceb43f7 (rules changes + wackamolling bingles WHY DO THEY KEEP COMING BACK IM GONNA DIE):Resources/ServerInfo/Guidebook/ServerRules/RoleplayRules/RuleR7Metashield.xml
 <Document>
-  # Roleplay Rule 4 - Do not metagame, obey the Metashield
+  # Roleplay Rule 7 - Do not metagame, obey the Metashield
   Something that is "shielded" cannot be known by your character during a round until the "revealing condition" happens. This also means that your character cannot do things based on "shielded" information. Knowing or acting on something that is shielded before the revealing condition is met is referred to as metagaming.
 
   Revealing conditions reveal the shielded information for the round, not for a specific instance. This means that once a revealing condition is met in a round, the shield no longer applies in any case for the remainder of the round.
@@ -25,100 +28,35 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   - All information gained while in critical condition or unconscious.
   - The fact that a round will end.
 
-  This does not prevent knowing that a shift will end, but does prohibit things like preparing to kill people at central command when roleplay rules stop being enforced on LRP.
+  This does not prevent knowing that a shift will end, but does prohibit things like preparing to kill people at central command.
 
-  ## Nuclear Operatives
+  ## Magic Users
+  Heretics, Wizards, Space Devils, and Cultists are collectively known as "Magic Users". While mimes, chaplins, acolytes, and any crew members with psionics also fit this definition, there is no information about them that needs shielded.
 
-  Nuclear Operatives are known to exist in other sectors with active warfare, but the idea that the station you are currently on could be the target of a nuclear operative attack is nothing more than background paranoia that no sane individual would act on.
+  ### Shielded Knowledge
+  - Specific abilities/goals of magic user types
+  - The magical allegiance of crewmembers
+  - Exact purpose of role-specific items (reality fractures, pylons, etc.)
+  - Impending sacrifices or sacrificial targets
+  - Space devil contracts' supernatural effects
 
-  The fact that the nuke disk must be protected and could be used by a bad actor to try to destroy the station is not shielded.
-
-  The revealing condition for this shield is any of the following:
-  - Discovering a nuclear operative's shuttle
-  - An operative name
-  - A War Ops announcement
-  - Being a nuclear operative
-
-  ## Zombies
+  ### Unshielded Knowledge
+  - Magic exists in general
+  - Unlicensed magic is a minor criminal offense 
+  - Wizard Federation is chaotic
+  - General existence of magical items/artifacts
   
-  Zombies are known about, and there are some rumors that syndicate bioterrorists are behind it, but infections are so rare that no sensible person would prepare for one unprompted.
-
-  Situations that would prompt preperation are:
-  - Witnessing a zombie, alive or dead
-  - Finding a necrotic chemical
-  - Finding a Syndicate zombie bundle
-  - Finding a syringe of romerol	
-  - Being an MI13 or Interdyne Syndicate agent
-  - Being an initial infected.
-
-  ## Changelings
-
-  Changelings are a product of Andromedan wildlife, but only populate the fringes of colonial space. Their potential existence on the station is shielded.
-  This metashield prohibits players from crew bloodtesting until the metashield is revealed.
-
-  Knowledge about the abilities of changelings is not shielded.
-
   The revealing condition for this shield is any of the following:
-  - Discovering a hollowed body
-  - Witnessing changeling use their non-stealth abilities (not stings or passive abilities)
-  - Witnessing someone trying to absorb a body
-  - Witnessing someone changing their appearance
-  - Being a changeling
-
-  ## Heretics
-
-  Knowledge of heretics is actively supressed by the Organization for Religous Exemptions. Security, Command, and Chaplins may be aware that a people seeking ascension exist, but not on the station.
-  This metashield prohibits normal players from knowing what runes or reality fractures are. Security and Command may be suspicious of them.
-
-  Knowledge about the ability of heretics is not shielded.
-
-  The revealing condition for this shield is any of the following:
-  - Witnessing a crewmember drawing a rune
-  - Witnessing a crewmember harvesting a reality fracture
-  - Witnessing a crewmember using their powers
-
-  ## Space Devils
-
-  To most ordinary people, a Space Devil is a fake fairy tale made to scare people from talking to strangers.
-  This metashield prohibits players from knowing that a player is a Space Devil from their equipment alone, although they may distrust them as much as they wish.
-
-  Knowledge about the abilities and consequences of a Devil deal are not shielded.
-
-  The revealing condition for this shield is any of the following:
-  - You are a Space Devil.
-  - You are the Chaplain, a lawyer, or a member of Central Command. (Including BSO and NTR)
-  - You have made a deal with the Space Devil.
-  - You have witnessed someone make a deal with the Space Devil.
-  - You are offered a deal with a Space Devil.
-  - You witness someone get dragged to Space Hell.
-
-  ## Deathsquad
-
-  Deathsquads are known to exist - per the posters on the station, but they are not known as a crew killsquad, instead known as an elite team sent into stations to handle extreme threats even elite security ERT's would struggle with.
-  The station's Nanotrasen Representative and Blueshield Officer are aware that a Deathsquad is a crew killsquad, but are heavily prohibited to mention it, and will be dealt with after, or during, the shift.
-
-  In private conversations, faxes, or phone calls, both BSO & NTR are advised to use the term 'Janitor Squad' to refer to the Deathsquad.
-  Crew can also choose to roleplay as if they've seen deathsquad movies, knowing limited aspects of their gear one would reasonably know watching an action-movie.
-
-  Revealing conditions to the "Deathsquad" Shield:
-  - Code Omicron is called, nuking the station
-  - Code Epsilon is called, terminating contracts
-  - You are the Nanotrasen Representative (NTR)
-  - You are the Blueshield Officer (BSO)
-  - A Central Command Official (Non-NTR/BSO) mentions Deathsquad as a [bold]Killsquad[/bold]
-
-  ## Implanted implants
-
-  Implanted implants, other than Mindshields for command and security, are metashielded.
-
-  Implanters themselves and un-implanted implants are not shielded. This prohibits implant checking.
-
-  The revealing condition for this shield is any of the following:
-  - Discovering a non-NT implanter, used or unused
-  - Discovering a non-NT implant box
-  - Discovering use of a non-NT implant by anyone
-  - Experiencing a situation where absolutely no other explanation is possible
-  - Discovering an unlocked uplink
+  
+  - the presence or announcement of an Ascension.
+  - the presence or announcement of the Veil being torn.
+  - the presence or announcement of an Unknown god.
+  - the announcement of a "notable increase in Λ-CDM".
+  - witnessing a magic user's transformation (glowing eyes, cosmic energy, etc)
+  - witnessing the act of someone being sacrificed
+  - seeing a space devil contract
+  - witnessing someone be dragged to space hell
+  - seeing magic summon mobs / familiars (flesh stalker, juggernauts, etc)
 
   ## Chameleon Items
 
@@ -172,5 +110,4 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   - The fact that the Syndicate are enemies of Nanotrasen, and that they regularly attempt to send covert agents to spy on, sabotage, or attack Nanotrasen.
   - A character's typical appearance. Though you should keep in mind that multiple characters can share the same name.
   - The fact that the Syndicate have covert items capable of getting items to them, and that these items are known as uplinks.
-  - Wizards are not metashielded as the wizards federation is well rumoured about.
 </Document>

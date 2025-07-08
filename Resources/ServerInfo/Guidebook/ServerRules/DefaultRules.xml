@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--
 SPDX-FileCopyrightText: 2024 Aidenkrz <aiden@djkraz.com>
 SPDX-FileCopyrightText: 2024 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
@@ -11,8 +12,10 @@ SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
+=======
+>>>>>>> c3cceb43f7 (rules changes + wackamolling bingles WHY DO THEY KEEP COMING BACK IM GONNA DIE)
 <Document>
-# Goobstation Rules
+# Midnight Station Rules
 
   Space Station 14 is not like most games. Many rules are designed to require roleplay, and not all rules are intuitive. Please take the time to read and understand the rules before you play so that you aren't surprised. Some of our rules are zero tolerance rules, meaning that a violation will result in an indefinite ban without any warning. Game admins will treat you as if you have read the rules, even if you have not.
 
@@ -43,26 +46,17 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   See the list of [textlink="role types" link="RoleTypes"] for more information about the different types of roles.
 
 
-  - [textlink="1. Silicons must follow Silicon Rules" link="RuleR1"]
-  - [textlink="2. Familiars must obey their master" link="RuleR2"]
-  - [textlink="3. Roleplay a normal person" link="RuleR3"]
-  - [textlink="4. Do not metagame, obey the Metashield" link="RuleR4"]
-  - [textlink="5. Don't interfere with arrivals" link="RuleR5"]
-  - [textlink="6. Don't act like an antagonist unless the game tells you that you are one" link="RuleR6"]
-  - [textlink="7. Do not stall the round" link="RuleR7"]
-  - [textlink="8. As an antagonist, only be friendly to your team and don't work against your team" link="RuleR8"]
-  - [textlink="9. Act according to your severity" link="RuleR9"]
-  - [textlink="10. Listen to your team leader" link="RuleR10"]
-  - [textlink="11. Follow reasonable escalation" link="RuleR11"]
-  - [textlink="12. Do not abandon your role" link="RuleR12"]
-  - [textlink="13. Stick to your role" link="RuleR13"]
-  - [textlink="14. Set an example if playing command or security" link="RuleR14"]
-  - [textlink="15. Command and Security must follow Space Law" link="RuleR15"]
-  - [textlink="16. Blueshield Officer Rules" link="RuleR16"]
-  - [textlink="17. Nanotrasen Representative Rules" link="RuleR17"]
-  - [textlink="18. Don't rush for or prepare equipment unrelated to your job. (Powergaming)" link="RuleR18"]
-  - [textlink="19. Do not avoid your job or ignore roleplay to PvP (Validhunting)" link="RuleR19"]
-  - [textlink="20. Death Amnesia: You do not know who killed you." link="RuleR20"]
+  - [textlink="1. Roleplay a person" link="RuleR1"]
+  - [textlink="2. Do not interfere with arrivals" link="RuleR2"]
+  - [textlink="3. Do not stall the round" link="RuleR3"]
+  - [textlink="4. Listen to your team leader" link="RuleR4"]
+  - [textlink="5. Set an example if playing command or security" link="RuleR5"]
+  - [textlink="6. Death Amnesia" link="RuleR6"]
+  - [textlink="7. Do not metagame, obey the Metashield" link="RuleR7"]
+  - [textlink="8. Do not cause disruption disproportionate to your severity" link="RuleR8"]
+  - [textlink="9. Follow reasonable escalation" link="RuleR9"]
+  - [textlink="10. Familiars must obey their master" link="RuleR10"]
+  - [textlink="11. Silicons must follow Silicon Rules" link="RuleR11"]
 
   ## SILICON RULES
   You are only silicon if the game clearly and explicitly tells you that you are a silicon. For players who are silicons, these Silicon Rules override all roleplay rules if there is any conflict. Silicon Rules do not override core rules.

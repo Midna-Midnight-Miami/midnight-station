@@ -12,8 +12,6 @@
       prob: 1.6
     - id: AnomalySpawn
       prob: 1.8
-    - id: BingleSpawn
-      prob: 1.6
     - id: SlimesSpawn
       prob: 1.8
     - id: SpiderSpawn
@@ -132,9 +130,9 @@
   - type: SubGamemodes
     rules:
     - id: Thief
-      prob: 3.0
-    - id: MassHallucinations
-      prob: 4.5
+      prob: 1.4
+    - id: CalmPestEventsTable
+      prob: 2.0
     - id: AnomalySpawn
       prob: 2.7
     - id: KudzuGrowth
